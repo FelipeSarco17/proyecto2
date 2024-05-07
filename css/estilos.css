@@ -1,0 +1,103 @@
+
+
+:root{
+    --bgColor2: white;
+    --bgColor : rgb(33,37,41);
+    --primario: rgb(79, 36, 164);
+    --secundario: #bd9bff;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body{
+    margin: 0px;
+    background-color: var(--bgColor);
+}
+
+nav{
+    display: flex;
+    position: sticky;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primario);
+    width: 100vw;
+    height: 100px;
+}
+
+#navParteIzquierda{
+    display: flex;
+    align-items: center;
+
+}   
+
+
+#navParteIzquierda a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+
+#logoDragonNav{
+    width: 150px;
+}
+
+#navParteDerecha{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.favCart{
+    width: 25px;
+    margin-right: 25px;
+}
+
+.contenedorFavCart{
+    position: relative;
+}
+
+.contadorFavCart{
+    background-color: var(--secundario);
+    width: 15px;
+    height: 16px;
+    font-size: 12px;
+    position: absolute;
+    right: 20px;
+    top: -8px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+
+#botonLogIn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    height: 50px;
+    font-family: 10px;
+    background-color: var(--primario);
+    border-radius: 50px;
+    border: 2px solid var(--secundario);
+}
+
+#botonLogIn img{
+    width: 30px;
+}
+
+#logoDragonHeader{
+    width: 400px;
+}
+
+
+#contenedorLogo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
