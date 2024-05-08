@@ -1,10 +1,9 @@
-
-
 :root{
     --bgColor2: white;
     --bgColor : rgb(33,37,41);
     --primario: rgb(79, 36, 164);
     --secundario: #bd9bff;
+    --terciario: #9333ea;
 }
 
 *{
@@ -41,7 +40,7 @@ nav{
 }
 
 
-#logoDragonNav{
+.logoDragonNav{
     width: 150px;
 }
 
@@ -65,6 +64,7 @@ nav{
     width: 15px;
     height: 16px;
     font-size: 12px;
+    color: white;
     position: absolute;
     right: 20px;
     top: -8px;
@@ -80,7 +80,7 @@ nav{
     gap: 5px;
     color: white;
     height: 50px;
-    font-family: 10px;
+    font-size: 13px;
     background-color: var(--primario);
     border-radius: 50px;
     border: 2px solid var(--secundario);
@@ -92,12 +92,83 @@ nav{
 
 #logoDragonHeader{
     width: 400px;
+    filter: drop-shadow(10px 10px 2px var(--secundario));
 }
 
 
 #contenedorLogo{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 400px;
+    grid-template-columns: 400px 450px;
+    column-gap: 5px;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
+
+#barraBusqueda{
+    width: 250px;
+    padding: 12px;
+    border-radius: 50px;
+    border: 2px solid var(--secundario);
+}
+
+#botonBusqueda{
+    position: absolute;
+    right: 630px;
+    top: 212.5px; 
+    padding: 10px;
+}
+
+.botones{
+    color: white;
+    font-size: 1.2em;  
+    padding: 8px;
+    width: 150px;
+    background-color: var(--primario);
+    border-radius: 50px;
+    border: 2px solid var(--secundario);
+}
+
+#logoDragonModal{
+    width: 100px;
+}
+
+#formLogin{
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 20px 35px 20px 35px;
+    grid-row-gap: 15px;
+}
+
+#formLogin label{
+    display: flex;
+    align-items: center;
+}
+
+#formLogin input{
+    width: 250px;
+}
+
+#linksModal{
+    margin-top: 15px;
+    text-align: center;
+
+}
+
+#linksModal a{
+    color: var(--secundario);
+    padding: 20px;
+}
+
+
+#linksModal a:hover{
+    color: var(--terciario);
+}
+
+#headerColumn2 h1{
+    color: white;
+    margin-bottom: 30px;
+}
+
