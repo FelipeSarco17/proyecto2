@@ -221,23 +221,36 @@ nav{
 /* MAIN */
 
 main{
-    height: 1035px;
+    margin-bottom: 150px;
     display: flex;
-    align-content: flex-start;
-    gap: 100px;
     margin-top: 150px;
+    gap: 0px 30px;
+}
+
+.publicidad{
+    width: 200px;
+    margin-left: 10px ;
+}
+
+
+#seccionAcordeonPublicidad{
+    margin-left: 10px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+   
 }
 
 #seccionProductos{
     display: grid;
     grid-template-columns: 300px 300px 300px 300px;
-    grid-template-rows: 320px 320px; 
+    grid-template-rows: 320px 320px 320px; 
     gap: 20px 20px;
 }
 
 #accordionCategorias{
-    width: 300px; 
-    height: 700px;
+    width: 400px; 
+    height: 600px;
 }
  
 
@@ -263,6 +276,7 @@ main{
 
 .card{
     width: 300px;
+    height: 300px;
 }
 
 .card-img-top{
