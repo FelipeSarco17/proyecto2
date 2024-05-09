@@ -221,7 +221,69 @@ nav{
 /* MAIN */
 
 main{
-    height: 100vh;
+    height: 1035px;
+    display: flex;
+    align-content: flex-start;
+    gap: 100px;
+    margin-top: 150px;
+}
+
+#seccionProductos{
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-rows: 320px 320px; 
+    gap: 20px 20px;
+}
+
+#accordionCategorias{
+    width: 300px; 
+    height: 700px;
+}
+ 
+
+.accordion-item button{
+    background-color: var(--primario);
+    color: white;
+}
+
+.accordion-item{
+    background-color: var(--primario);
+    
+}
+
+
+.listasCategorias{
+    list-style-type:none;
+}
+
+.listasCategorias a{
+    color: white;
+    text-decoration: none;
+}
+
+.card{
+    width: 300px;
+}
+
+.card-img-top{
+    align-self: center;
+    width: 200px;
+}
+
+.card-text{
+    font-size: 1.3em;
+    text-align: end;
+    margin-right: 100px;
+}
+
+.logoFavCards{
+    width: 20px;
+}
+
+.cardPrice{
+    display: flex;
+    gap: 0px 20px;
+
 }
 
 /* *******************************  */
@@ -372,9 +434,7 @@ footer{
 
     /* COLLAPSE */
 
-    header{
-        
-    }
+   
 
     #navParteIzquierda{
         display: flex;
@@ -384,10 +444,7 @@ footer{
         
     }
 
-    #navParteDerecha{
-        
-    }
-
+    
     #contenedorBusqueda{
         display: flex;
         
