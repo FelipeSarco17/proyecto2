@@ -62,6 +62,7 @@ let favoritos = [];
 
 
 const botonLogin = document.querySelector("#botonModalLogin");
+const pagina = document.getElementsByTagName("title");
 botonLogin.setAttribute("data-bs-dismiss"," ");
 botonLogin.addEventListener("click",(e)=>{
 
@@ -73,22 +74,47 @@ botonLogin.addEventListener("click",(e)=>{
         if(usuario.email==email && usuario.password==password){
             let perfil = document.querySelector("#botonLogIn");
 
-            perfil.innerHTML = `<img src="./img/user.svg" alt="LogoUser">${usuario.nombre}`;
-            botonLogin.setAttribute("data-bs-dismiss","modal");
+            
+            if(pagina.innerText != "Wyvern"){
+                perfil.innerHTML = `<img src="../img/user.svg" alt="LogoUser">${usuario.nombre}`;
+                botonLogin.setAttribute("data-bs-dismiss","modal");
+            }
+            else{
+                perfil.innerHTML = `<img src="./img/user.svg" alt="LogoUser">${usuario.nombre}`;
+                botonLogin.setAttribute("data-bs-dismiss","modal");
+            }
         }
         else{
-            let modalBodyLogin = document.querySelector("#modalBodyLogin");
-            modalBodyLogin.innerHTML = `
-            <form action="" id="formLogin">
 
-            <label for="inputEmail"><img src="./img/user.svg" alt="logoUser">Email</label>
-            <input type="text" name="email" id="inputEmail" required>
-            <label for="inputPass"><img src="./img/logoPassword.svg" alt="logoPassword">Contraseña</label>
-            <input type="password" name="pass" id="inputPass" required>
-            </form>
-            <p style="color:red; text-align:center; margin-top:5px;">La contraseña o el correo ingresados son incorrectos</p>
-            <p id="linksModal"><a href="" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">¿No tienes una cuenta?</a> <a href="">¿Olvidaste tu contraseña?</a></p>
-            `;
+            if(pagina.innerText != "Wyvern"){
+                let modalBodyLogin = document.querySelector("#modalBodyLogin");
+                modalBodyLogin.innerHTML = `
+                <form action="" id="formLogin">
+
+                <label for="inputEmail"><img src="../img/user.svg" alt="logoUser">Email</label>
+                <input type="text" name="email" id="inputEmail" required>
+                <label for="inputPass"><img src="../img/logoPassword.svg" alt="logoPassword">Contraseña</label>
+                <input type="password" name="pass" id="inputPass" required>
+                </form>
+                <p style="color:red; text-align:center; margin-top:5px;">La contraseña o el correo ingresados son incorrectos</p>
+                <p id="linksModal"><a href="" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">¿No tienes una cuenta?</a> <a href="">¿Olvidaste tu contraseña?</a></p>
+                `;
+            }
+            else{
+                let modalBodyLogin = document.querySelector("#modalBodyLogin");
+                modalBodyLogin.innerHTML = `
+                <form action="" id="formLogin">
+
+                <label for="inputEmail"><img src="./img/user.svg" alt="logoUser">Email</label>
+                <input type="text" name="email" id="inputEmail" required>
+                <label for="inputPass"><img src="./img/logoPassword.svg" alt="logoPassword">Contraseña</label>
+                <input type="password" name="pass" id="inputPass" required>
+                </form>
+                <p style="color:red; text-align:center; margin-top:5px;">La contraseña o el correo ingresados son incorrectos</p>
+                <p id="linksModal"><a href="" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">¿No tienes una cuenta?</a> <a href="">¿Olvidaste tu contraseña?</a></p>
+                `;
+            }
+            
             
         }
 

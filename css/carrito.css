@@ -1,0 +1,71 @@
+:root{
+    --bgColor2: white;
+    --bgColor : rgb(33,37,41);
+    --primario: rgb(79, 36, 164);
+    --secundario: #bd9bff;
+    --terciario: #9333ea;
+}
+
+main{
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 1000px 500px;
+    justify-content: center;
+    align-items: start;
+}
+
+#listadoCarrito{
+    
+    padding: 200px;
+    width: 1000px;
+    /* background-color: var(--secundario); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3%;
+    border: 2px solid var(--secundario);
+}
+
+#carritoVacio{
+    text-align: center;
+    color: white;
+}
+
+#carritoVacio img{
+    width: 120px;
+}
+
+#carritoVacio a{
+    display: inline-block;
+    background-color: var(--primario);
+    border-radius: 6px;
+    width: 328px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    padding: 0 24px;
+    text-decoration: none;
+    
+}
+
+#carritoVacio a:hover{
+    background-color: var(--secundario);
+    transition: all 1s ;
+}
+
+#resumenCarrito{
+    
+    width: 500px;
+    /* background-color: var(--secundario); */
+    border-radius: 20px;
+    border: 2px solid var(--secundario);
+    color: white;
+}
+
+#tituloResumen{
+    padding: 20px 0px 0px 20px;
+}
+
+#textoResumenVacio{
+    padding: 20px 0px 0px 20px;
+}
