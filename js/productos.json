@@ -1,0 +1,65 @@
+[
+
+    {
+        "id": 1,
+        "nombre": "Fuente Cougar 750W 80 Plus Gold GEC750" ,
+        "precio": "123.550" ,
+        "categoria": "Fuentes",
+        "especificaciones": {"certificacion":"80 Plus Gold GEC750","Modular": "No"},
+        "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_39112_Fuente_Cougar_750W_80_Plus_Gold_GEC750_1d2f2d18-grn.jpg"
+        
+    },
+    {
+        "id": 2,
+        "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
+        "precio": "123.551" ,
+        "categoria": "Placas de Video Radeon AMD ",
+        "especificaciones": {  "Tipo":"pcie",
+                              "Ancho":"120mm",
+                              "Largo":"270mm",
+                              "Espesor":"2 Slots",
+                              "Conectividad": {
+                                                "Dvi": "1",
+                                                "HDMI": "1",
+                                                "DisplayPorts": "3"
+                                                }
+                              
+
+        
+                            },
+                
+        "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_39191_Placa_de_Video_XFX_Radeon_RX_580_8GB_GDDR5_GTS_2048SP_8c7b9091-grn.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Silla Gamer Corsair T3 Rush Fabric Carbon" ,
+        "precio": "123.550" ,
+        "categoria": "Sillas Gamer",
+        "especificaciones": {"Peso Max": "120KG" },
+        "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_36811_Silla_Gamer_Corsair_T3_Rush_Fabric_Carbon__Peso_MAX._120kg__88bef6b4-grn.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Gabinete Antec NX292 MESH White RGB" ,
+        "precio": "123.550" ,
+        "categoria": "Gabinetes",
+        "especificaciones": {"Ancho": "200mm",
+                             "Alto":"270mm",
+                             "Profundidad":"400mm",
+                             "Factor Mother": "ITX,M-ATX,ATX,E-ATX",
+                             "USB2.0": "2",
+                             "Coolers120mmIncluidos": "4"
+                            },
+        "imagen":"https://imagenes.compragamer.com/productos/compragamer_Imganen_general_38038_Gabinete_Antec_NX292_MESH_White_RGB_Vidrio_Templado_2184f894-grn.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "Monitor ASUS 21.5'' VP228HE" ,
+        "precio": "123.550" ,
+        "categoria": "Monitores",
+        "especificaciones": {"Panel":"TN","Conectividad":{"HDMI": "1","VGA":"1"}},
+        "imagen":"https://imagenes.compragamer.com/productos/compragamer_Imganen_general_17959_Monitor_ASUS_21.5__VP228HE_TN_Full_HD_1ms_HDMI_VGA_Audio_0982edcc-grn.jpg"
+    }
+
+    
+]

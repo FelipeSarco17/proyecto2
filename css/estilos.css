@@ -223,6 +223,7 @@ nav{
 main{
     margin-bottom: 150px;
     display: flex;
+    
     margin-top: 150px;
     gap: 0px 30px;
 }
@@ -242,10 +243,17 @@ main{
 }
 
 #seccionProductos{
-    display: grid;
+    /* display: grid;
     grid-template-columns: 300px 300px 300px 300px;
     grid-template-rows: 320px 320px 320px; 
-    gap: 20px 20px;
+    gap: 20px 20px; */
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 10px 20px;
+    width: 69%;
+    height: 1000px;
 }
 
 #accordionCategorias{
@@ -290,6 +298,12 @@ main{
     margin-right: 100px;
 }
 
+.botonFavoritos, .botonCarritoAñadir{
+    border: 0px;
+    padding: 0px;
+    background-color: white;
+}
+
 .logoFavCards{
     width: 20px;
 }
@@ -298,6 +312,10 @@ main{
     display: flex;
     gap: 0px 20px;
 
+}
+
+.card-body{
+    padding: 5px;
 }
 
 /* *******************************  */
