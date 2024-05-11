@@ -18,7 +18,7 @@ fetch("./js/productos.json")
             <img src="${producto.imagen}" alt="" class="card-img-top">
             <div class="card-body">
 
-                <h5 class="card-title">${producto.nombre}</h5> 
+                <a href=" "><h5 class="card-title">${producto.nombre}</h5></a>
                 <div class="cardPrice"> 
                     <p class="card-text">
                         $${producto.precio}
@@ -42,7 +42,14 @@ fetch("./js/productos.json")
 
 window.onload = ()=>{
     
-    
+        let usuarioLogin = leerUsuarioLogueado();
+
+        if(usuarioLogin){
+
+        let perfil = document.querySelector("#botonLogIn");
+        perfil.innerHTML = `<img src="./img/user.svg" alt="LogoUser">${usuarioLogin.nombre}`;
+
+        }
         
         leerCarrito();
          
@@ -59,6 +66,8 @@ window.onload = ()=>{
         contadoresFavoritos.forEach((contadorFavoritos)=>{
         contadorFavoritos.innerText = `${favoritosHomePage.length}`;
         });
+
+        
     
 };
 
@@ -95,6 +104,13 @@ function leerCarrito(){
     
 }
 
+function leerUsuarioLogueado(){
+    let usuarioLogueado = JSON.parse(localStorage.getItem("usuarioLogueado"));
+    if(usuarioLogueado){
+        return usuarioLogueado;
+    }
+}
+
 function leerFavoritos(){
     
     let favoritosLocalStorage = JSON.parse(localStorage.getItem("favoritos")); 
@@ -116,6 +132,10 @@ function cargarCarrito(data){
     localStorage.setItem("carrito",JSON.stringify(data));
 }
 
+function cargarUsuario(data){
+    localStorage.setItem("usuarioLogueado",JSON.stringify(data));
+}
+
 // ****************************
 
 
@@ -135,8 +155,8 @@ botonLogin.addEventListener("click",(e)=>{
         if(usuarios[i].email==email && usuarios[i].password==password){
             let perfil = document.querySelector("#botonLogIn");
             botonLogin.setAttribute("data-bs-dismiss","modal");
+            cargarUsuario(usuarios[i]);
             perfil.innerHTML = `<img src="./img/user.svg" alt="LogoUser">${usuarios[i].nombre}`;
-            
             login=true;
             
          }
@@ -254,8 +274,6 @@ function añadirProductoFavoritos(idProducto){
 }
 
 // ****************************
-
-
 
 
 

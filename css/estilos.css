@@ -243,15 +243,21 @@ main{
 }
 
 #seccionProductos{
-    /* display: grid;
-    grid-template-columns: 300px 300px 300px 300px;
-    grid-template-rows: 320px 320px 320px; 
-    gap: 20px 20px; */
     display: grid;
     grid-template-columns: 300px 300px 300px 300px;  
     grid-template-rows: 300px 300px;
     gap: 10px 20px;
     width: 69%;
+}
+
+#seccionProductos a{
+    color: black;
+    text-decoration: none;
+}
+
+#seccionProductos a:hover{
+    color: var(--primario);
+    text-decoration: underline;
 }
 
 #accordionCategorias{
@@ -319,6 +325,8 @@ main{
 .card-body{
     padding: 5px;
 }
+
+
 
 /* *******************************  */
 

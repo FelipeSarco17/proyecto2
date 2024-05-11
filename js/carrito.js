@@ -13,34 +13,6 @@ else{
     console.log("hola");
 }
 
-// carrito.forEach((productoCarrito)=>{
-
-//     listaCarrito.innerHTML += `
-
-//     <article class="productoCarrito">
-//         <div class="textoProductoCarrito">
-//             <img class="imgProductoCarrito" src="${productoCarrito.imagen}" alt="">
-   
-//             <h4 class="nombreProducto">${productoCarrito.nombre}</h4>
-//          </div>
-
-//         <div class="botonesCarrito">
-        
-//             <button class="restarProducto" onclick="eliminarProductoCarrito(${productoCarrito.id})">-</button>
-//             <p class="cantidadProducto">${productoCarrito.cantidadEnCarrito}</p>
-//             <button class="sumarProducto" onclick="agregarProductoCarrito(${productoCarrito.id})">+</button>
-        
-            
-//         </div>
-//         <p class="precioProductoLista">$${productoCarrito.precio*productoCarrito.cantidadEnCarrito}</p>
-//     </article>
-    
-    
-//     `;
-   
-// });
-
-
 function leerCarrito(){
     let carrito = localStorage.getItem("carrito");
     return JSON.parse(carrito);
