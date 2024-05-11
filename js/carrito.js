@@ -9,9 +9,7 @@ if(carrito.length!=0){
     carritoVacio.style.display = "none";
     actualizarLista();
 }
-else{
-    console.log("hola");
-}
+
 
 function leerCarrito(){
     let carrito = localStorage.getItem("carrito");

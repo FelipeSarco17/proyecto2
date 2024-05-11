@@ -223,7 +223,6 @@ nav{
 main{
     margin-bottom: 150px;
     display: flex;
-    
     margin-top: 150px;
     gap: 0px 30px;
 }
@@ -239,7 +238,6 @@ main{
     width: 400px;
     display: flex;
     flex-direction: column;
-   
 }
 
 #seccionProductos{

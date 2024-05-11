@@ -275,6 +275,7 @@ function añadirProductoFavoritos(idProducto){
 
 // ****************************
 
+//ACORDEON CATEGORIAS
 
 
 
