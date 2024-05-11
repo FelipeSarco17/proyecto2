@@ -59,6 +59,69 @@
         "categoria": "Monitores",
         "especificaciones": {"Panel":"TN","Conectividad":{"HDMI": "1","VGA":"1"}},
         "imagen":"https://imagenes.compragamer.com/productos/compragamer_Imganen_general_17959_Monitor_ASUS_21.5__VP228HE_TN_Full_HD_1ms_HDMI_VGA_Audio_0982edcc-grn.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
+        "precio": "123.551" ,
+        "categoria": "Placas de Video Radeon AMD ",
+        "especificaciones": {  "Tipo":"pcie",
+                              "Ancho":"120mm",
+                              "Largo":"270mm",
+                              "Espesor":"2 Slots",
+                              "Conectividad": {
+                                                "Dvi": "1",
+                                                "HDMI": "1",
+                                                "DisplayPorts": "3"
+                                                }
+                              
+
+        
+                            },
+                
+        "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_39191_Placa_de_Video_XFX_Radeon_RX_580_8GB_GDDR5_GTS_2048SP_8c7b9091-grn.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
+        "precio": "123.551" ,
+        "categoria": "Placas de Video Radeon AMD ",
+        "especificaciones": {  "Tipo":"pcie",
+                              "Ancho":"120mm",
+                              "Largo":"270mm",
+                              "Espesor":"2 Slots",
+                              "Conectividad": {
+                                                "Dvi": "1",
+                                                "HDMI": "1",
+                                                "DisplayPorts": "3"
+                                                }
+                              
+
+        
+                            },
+                
+        "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_39191_Placa_de_Video_XFX_Radeon_RX_580_8GB_GDDR5_GTS_2048SP_8c7b9091-grn.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
+        "precio": "123.551" ,
+        "categoria": "Placas de Video Radeon AMD ",
+        "especificaciones": {  "Tipo":"pcie",
+                              "Ancho":"120mm",
+                              "Largo":"270mm",
+                              "Espesor":"2 Slots",
+                              "Conectividad": {
+                                                "Dvi": "1",
+                                                "HDMI": "1",
+                                                "DisplayPorts": "3"
+                                                }
+                              
+
+        
+                            },
+                
+        "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_39191_Placa_de_Video_XFX_Radeon_RX_580_8GB_GDDR5_GTS_2048SP_8c7b9091-grn.jpg"
     }
 
     

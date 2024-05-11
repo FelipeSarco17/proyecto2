@@ -1,15 +1,16 @@
-let productos = [];
-fetch('./js/productos.json')
+let productosHomePage = [];
+let favoritosHomePage = [];
+let carritoHomePage = [];
+
+fetch("./js/productos.json")
 .then(response => response.json())
 .then((data)=>{
     
-    console.log(data);
-    productos = data;
-    let seccionProductos = document.querySelector("#seccionProductos");
-    productos.forEach((producto)=>{
-
-        
-        
+        productosHomePage = data;
+     
+        let seccionProductos = document.querySelector("#seccionProductos");
+        productosHomePage.forEach((producto)=>{
+            cargarProductos();
         seccionProductos.innerHTML += `
 
         <article class="card"  id="producto${producto.id}">
@@ -22,8 +23,8 @@ fetch('./js/productos.json')
                         $${producto.precio}
                     </p>
 
-                    <button href="" class="botonFavoritos"><img src="./img/heartBlack.svg" alt="LogoFavoritos" class="logoFavCards"></button>
-                    <button href="" class="botonCarritoAñadir"><img src="./img/addCart.svg" alt="CarritoAñadir"></button>
+                    <button href="" class="botonFavoritos" onclick="añadirProductoFavoritos(${producto.id})"><img src="./img/heartBlack.svg" alt="LogoFavoritos" class="logoFavCards"></button>
+                    <button href="" class="botonCarritoAñadir" onclick="añadirProductoAlCarrito(${producto.id})"><img src="./img/addCart.svg" alt="CarritoAñadir" ></button>
           
                 </div>
             </div>
@@ -32,11 +33,24 @@ fetch('./js/productos.json')
         `;
 
     });
-
+   
+    
 
 })
 .catch((error) => console.error("No se pudo conseguir la data:", error));
 
+window.onload = ()=>{
+    leerCarrito();
+    leerFavoritos();
+    let contadoresFavoritos = document.querySelectorAll("#contadorFavs");
+    contadoresFavoritos.forEach((contadorFavoritos)=>{
+        contadorFavoritos.innerText = `${favoritosHomePage.length}`;
+    });
+    let contadoresCarrito = document.querySelectorAll("#contadorCarrito");
+    contadoresCarrito.forEach((contadorCarrito)=>{
+        contadorCarrito.innerText = `${carritoHomePage.length}`;
+    });
+};
 
 
 const botonesFav = document.querySelectorAll(".botonFavoritos");
@@ -58,8 +72,35 @@ let usuarios = [{email:"felipe@gmail.com",
                 }
                 ];
 
-let favoritos = [];
 
+
+// LOCAL STORAGE
+
+function leerCarrito(){
+    carritoHomePage = JSON.parse(localStorage.getItem("carrito"));
+}
+
+function leerFavoritos(){
+    
+    favoritosHomePage = JSON.parse(localStorage.getItem("favoritos"));
+}
+
+function cargarFavoritos(data){
+    localStorage.setItem("favoritos",JSON.stringify(data));
+}
+
+function cargarProductos(){
+    localStorage.setItem("productos",JSON.stringify(productosHomePage));
+}
+
+function cargarCarrito(data){
+    localStorage.setItem("carrito",JSON.stringify(data));
+}
+
+// ****************************
+
+
+// BOTON LOGIN
 
 const botonLogin = document.querySelector("#botonModalLogin");
 const pagina = document.getElementsByTagName("title");
@@ -74,33 +115,12 @@ botonLogin.addEventListener("click",(e)=>{
         if(usuario.email==email && usuario.password==password){
             let perfil = document.querySelector("#botonLogIn");
 
-            
-            if(pagina.innerText != "Wyvern"){
-                perfil.innerHTML = `<img src="../img/user.svg" alt="LogoUser">${usuario.nombre}`;
-                botonLogin.setAttribute("data-bs-dismiss","modal");
-            }
-            else{
                 perfil.innerHTML = `<img src="./img/user.svg" alt="LogoUser">${usuario.nombre}`;
                 botonLogin.setAttribute("data-bs-dismiss","modal");
-            }
+            
         }
         else{
 
-            if(pagina.innerText != "Wyvern"){
-                let modalBodyLogin = document.querySelector("#modalBodyLogin");
-                modalBodyLogin.innerHTML = `
-                <form action="" id="formLogin">
-
-                <label for="inputEmail"><img src="../img/user.svg" alt="logoUser">Email</label>
-                <input type="text" name="email" id="inputEmail" required>
-                <label for="inputPass"><img src="../img/logoPassword.svg" alt="logoPassword">Contraseña</label>
-                <input type="password" name="pass" id="inputPass" required>
-                </form>
-                <p style="color:red; text-align:center; margin-top:5px;">La contraseña o el correo ingresados son incorrectos</p>
-                <p id="linksModal"><a href="" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">¿No tienes una cuenta?</a> <a href="">¿Olvidaste tu contraseña?</a></p>
-                `;
-            }
-            else{
                 let modalBodyLogin = document.querySelector("#modalBodyLogin");
                 modalBodyLogin.innerHTML = `
                 <form action="" id="formLogin">
@@ -113,8 +133,6 @@ botonLogin.addEventListener("click",(e)=>{
                 <p style="color:red; text-align:center; margin-top:5px;">La contraseña o el correo ingresados son incorrectos</p>
                 <p id="linksModal"><a href="" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">¿No tienes una cuenta?</a> <a href="">¿Olvidaste tu contraseña?</a></p>
                 `;
-            }
-            
             
         }
 
@@ -122,7 +140,9 @@ botonLogin.addEventListener("click",(e)=>{
 
 });
 
+// ****************************
 
+// BOTON REGISTRARSE
 const botonRegistro = document.querySelector("#botonRegistrarse");
 const inputsRegistro = document.querySelectorAll(".inputRegistro");
 botonRegistro.setAttribute("data-bs-dismiss"," ");
@@ -145,11 +165,57 @@ botonRegistro.addEventListener("click",()=>{
     botonRegistro.setAttribute("data-bs-dismiss","modal");
 });
 
+// ****************************
 
-const leerUsuarios = () =>{
-    localStorage.getItem(JSON.parse("usuarios"));
+
+// BOTON CARRITO
+
+
+
+
+
+function añadirProductoAlCarrito(idProducto){
+
+    let productoCarrito;
+    productosHomePage.forEach((producto)=>{
+
+        if(idProducto == producto.id){
+            productoCarrito = producto;
+        }
+    });
+    
+    carritoHomePage.push(productoCarrito);
+    cargarCarrito(carritoHomePage);
+    let contadoresCarrito = document.querySelectorAll("#contadorCarrito");
+    console.log(contadoresCarrito);
+    contadoresCarrito.forEach((contadorCarrito)=>{
+        contadorCarrito.innerText = `${carritoHomePage.length}`;
+    });
+    
+
 }
 
+
+function añadirProductoFavoritos(idProducto){
+
+    let productoFavorito;
+    productosHomePage.forEach((producto)=>{
+
+        if(idProducto == producto.id){
+            productoFavorito = producto;
+        }
+    });
+
+    favoritosHomePage.push(productoFavorito);
+    cargarFavoritos(favoritosHomePage);
+    let contadoresFavoritos = document.querySelectorAll("#contadorFavs");
+
+    contadoresFavoritos.forEach((contadorFavoritos)=>{
+        console.log(favoritosHomePage.length);
+        contadorFavoritos.innerText = `${favoritosHomePage.length}`;
+    });
+    
+}
 
 
 

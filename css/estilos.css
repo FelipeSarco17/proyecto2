@@ -247,13 +247,11 @@ main{
     grid-template-columns: 300px 300px 300px 300px;
     grid-template-rows: 320px 320px 320px; 
     gap: 20px 20px; */
-
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;  
+    grid-template-rows: 300px 300px;
     gap: 10px 20px;
     width: 69%;
-    height: 1000px;
 }
 
 #accordionCategorias{
@@ -311,7 +309,11 @@ main{
 .cardPrice{
     display: flex;
     gap: 0px 20px;
+    align-items: center;
+}
 
+.cardPrice p{
+    padding-top: 15px;
 }
 
 .card-body{

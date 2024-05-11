@@ -16,19 +16,20 @@ main{
 
 #listadoCarrito{
     
-    padding: 200px;
+    /* padding: 200px; */
     width: 1000px;
     /* background-color: var(--secundario); */
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 3%;
+    justify-content: center; */
+    border-radius: 20px;
     border: 2px solid var(--secundario);
 }
 
 #carritoVacio{
     text-align: center;
     color: white;
+    margin: 100px;
 }
 
 #carritoVacio img{
@@ -68,4 +69,74 @@ main{
 
 #textoResumenVacio{
     padding: 20px 0px 0px 20px;
+}
+
+.productoCarrito{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 96%;
+    margin: 20px;
+    border-radius: 20px;
+    /* border: 2px solid var(--secundario); */
+    background-color: white;
+}
+
+.imgProductoCarrito{
+    width: 150px;
+    border-radius: 20px;
+}
+
+.textoProductoCarrito{
+    display: flex;
+}
+
+.textoProductoCarrito h4{
+    padding-left: 20px;
+    padding-top: 10px ;
+}
+
+
+.botonesCarrito{
+    display: flex;
+    height: 30px;
+}
+
+.restarProducto{
+    background-color: var(--primario);
+    color: white;
+    width: 30px;
+    border-left: 2px solid var(--secundario);
+    border-top: 2px solid var(--secundario);
+    border-bottom: 2px solid var(--secundario);
+    border-right: 0px;
+    border-radius: 3px 0px 0px 3px;
+}
+
+.sumarProducto{
+    background-color: var(--primario);
+    color: white;
+    width: 30px;
+    border-left: 0px;
+    border-top: 2px solid var(--secundario);
+    border-bottom: 2px solid var(--secundario);
+    border-right: 2px solid var(--secundario);
+    border-radius: 0px 3px 3px 0px;
+}
+
+.cantidadProducto{
+    background-color: var(--primario);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-top: 2px solid var(--secundario);
+    border-bottom: 2px solid var(--secundario);
+    text-align: center;
+}
+
+.precioProductoLista{
+    padding-left: 100px ;
+    padding-right: 20px;
+    font-size: 20px;
 }
