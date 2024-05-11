@@ -14,14 +14,8 @@ main{
     align-items: start;
 }
 
-#listadoCarrito{
-    
-    /* padding: 200px; */
+#listadoCarrito{  
     width: 1000px;
-    /* background-color: var(--secundario); */
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
     border-radius: 20px;
     border: 2px solid var(--secundario);
 }
@@ -36,7 +30,7 @@ main{
     width: 120px;
 }
 
-#carritoVacio a{
+.botonesGrandesCarrito{
     display: inline-block;
     background-color: var(--primario);
     border-radius: 6px;
@@ -49,7 +43,7 @@ main{
     
 }
 
-#carritoVacio a:hover{
+.botonesGrandesCarrito:hover{
     background-color: var(--secundario);
     transition: all 1s ;
 }
@@ -57,10 +51,12 @@ main{
 #resumenCarrito{
     
     width: 500px;
-    /* background-color: var(--secundario); */
     border-radius: 20px;
     border: 2px solid var(--secundario);
     color: white;
+    display: flex;
+    flex-direction: column;
+    
 }
 
 #tituloResumen{
@@ -102,42 +98,99 @@ main{
 .botonesCarrito{
     display: flex;
     height: 30px;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .restarProducto{
     background-color: var(--primario);
     color: white;
     width: 30px;
-    border-left: 2px solid var(--secundario);
+    height: 30px;
+    /* border-left: 2px solid var(--secundario);
     border-top: 2px solid var(--secundario);
     border-bottom: 2px solid var(--secundario);
-    border-right: 0px;
-    border-radius: 3px 0px 0px 3px;
+    border-right: 0px; */
+    /* border: 2px solid var(--secundario); */
+    border: 0px;
+    border-radius: 50%;
+}
+
+.restarProducto:hover{
+    background-color: var(--secundario);
+    color: black;
+    transition: all 1s ;
 }
 
 .sumarProducto{
     background-color: var(--primario);
     color: white;
     width: 30px;
-    border-left: 0px;
+    height: 30px;
+    /* border-left: 0px;
     border-top: 2px solid var(--secundario);
     border-bottom: 2px solid var(--secundario);
     border-right: 2px solid var(--secundario);
-    border-radius: 0px 3px 3px 0px;
+    border-radius: 0px 3px 3px 0px; */
+    /* border: 2px solid var(--secundario); */
+    border: 0px;
+    border-radius: 50%;
 }
 
+.sumarProducto:hover{
+    background-color: var(--secundario);
+    color: black;
+    transition: all 1s ;
+}
+
+
 .cantidadProducto{
+    
     background-color: var(--primario);
     color: white;
     width: 30px;
     height: 30px;
-    border-top: 2px solid var(--secundario);
-    border-bottom: 2px solid var(--secundario);
+    /* border-top: 2px solid var(--secundario);
+    border-bottom: 2px solid var(--secundario); */
+    margin: 0px 6px;
+    /* border: 2px solid var(--secundario); */
+    border-radius: 50%;
+    padding-top: 2px;
     text-align: center;
 }
 
 .precioProductoLista{
-    padding-left: 100px ;
+    padding-left: 50px ;
     padding-right: 20px;
     font-size: 20px;
+    margin: 0px;
+}
+
+#listaResumenCarrito{
+    display: flex;
+    justify-content: space-between;
+}
+
+#tituloResumen img{
+    width: 30px;
+}
+
+#titulosPrecios{
+    list-style-type: none;
+}
+
+#sumaPrecios{
+    margin-right: 35px;
+    list-style-type: none;
+}
+
+#contenedorListaResumen{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+#contenedorListaResumen a{
+    align-self: center;
+    margin: 10px;
 }
