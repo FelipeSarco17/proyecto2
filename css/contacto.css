@@ -1,0 +1,82 @@
+:root{
+    --bgColor2: white;
+    --bgColor : rgb(33,37,41);
+    --primario: rgb(79, 36, 164);
+    --secundario: #bd9bff;
+    --terciario: #9333ea;
+  }
+  
+  *{
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+
+  #seccionContacto{
+    border: 2px solid var(--secundario);
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    
+  }
+
+  #seccionContacto article{
+    margin: 0px 50px;
+  }
+
+  #mapaSucursal iframe{
+    border-radius: 20px;
+  }
+
+#infoContacto form{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+form button{
+  display: inline-block;
+  background-color: var(--primario);
+  border-radius: 6px;
+  border: 0px;
+  width: 328px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+  padding: 0 24px;
+  text-decoration: none;
+  color: white;
+  align-self: center;
+  margin-top: 10px;
+}
+
+form button:hover{
+  color: black;
+  background-color: var(--secundario);
+  transition: all 1s ;
+}
+
+#tituloRedes{
+  margin-top: 20px;
+  text-align: center;
+}
+
+#infoContacto{
+  display: flex;
+  flex-direction: column;
+}
+
+#infoContacto ul{
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
