@@ -2,40 +2,89 @@ let productosHomePage = [];
 let favoritosHomePage = [];
 let carritoHomePage = [];
 
-
-fetch("./js/productos.json")
+fetch("./js/productosDestacados.json")
 .then(response => response.json())
 .then((data)=>{
     
         productosHomePage = data;
      
         let seccionProductos = document.querySelector("#seccionProductos");
+        let seccionNuevos = document.querySelector("#seccionNuevos");
         productosHomePage.forEach((producto)=>{
             cargarProductos();
-        seccionProductos.innerHTML += `
-
-        <article class="card"  id="producto${producto.id}">
-            <img src="${producto.imagen}" alt="" class="card-img-top">
-            <div class="card-body">
-
-                <a href=" "><h5 class="card-title">${producto.nombre}</h5></a>
-                <div class="cardPrice"> 
-                    <p class="card-text">
-                        $${producto.precio}
-                    </p>
-
-                    <button href="" id="botonFavoritoAñadir${producto.id}" class="botonFavoritos" onclick="añadirProductoFavoritos(${producto.id})" ><img src="./img/heartBlack.svg" alt="LogoFavoritos" class="logoFavCards"></button>
-                    <button href="" id="botonCarritoAñadir${producto.id}" class="botonCarritoAñadir" onclick="añadirProductoAlCarrito(${producto.id})"><img src="./img/addCart.svg" alt="CarritoAñadir" ></button>
-          
-                </div>
-            </div>
-        </article>
         
-        `;
+        if(producto.destacado){
+            seccionProductos.innerHTML += `
 
+            <article class="tarjeta" id="producto${producto.id}">
+                <div class="tarjeta-img-top">
+                    <img src="${producto.imagen}" alt="" >
+ 
+                </div>
+          
+                <div class="card-body">
+
+                    <a href=" ">
+                    <h5 class="card-title">${producto.nombre}</h5>
+                    </a>
+                    <div class="cardPrice">
+                        <p class="tarjeta-text">
+                        $${producto.precio}
+                        </p>
+
+                        <button href="" id="botonFavoritoAñadir${producto.id}" class="botonFavoritos"
+                         onclick="añadirProductoFavoritos(${producto.id})"><img src="./img/heartBlack.svg" alt="LogoFavoritos"
+                        class="logoFavCards"></button>
+                        <button href="" id="botonCarritoAñadir${producto.id}" class="botonCarritoAñadir"
+                        onclick="añadirProductoAlCarrito(${producto.id})"><img src="./img/addCart.svg"
+                        alt="CarritoAñadir"></button>
+
+                    </div>
+                </div>
+            </article>
+        
+            `;
+        }
+        
+        if(producto.nuevo){
+
+            console.log("hola");
+
+            seccionNuevos.innerHTML += `
+
+            <article class="tarjeta" id="producto${producto.id}">
+                <div class="tarjeta-img-top">
+                    <img src="${producto.imagen}" alt="" >
+ 
+                </div>
+          
+                <div class="card-body">
+
+                    <a href=" ">
+                    <h5 class="card-title">${producto.nombre}</h5>
+                    </a>
+                    <div class="cardPrice">
+                        <p class="tarjeta-text">
+                        $${producto.precio}
+                        </p>
+
+                        <button href="" id="botonFavoritoAñadir${producto.id}" class="botonFavoritos"
+                         onclick="añadirProductoFavoritos(${producto.id})"><img src="./img/heartBlack.svg" alt="LogoFavoritos"
+                        class="logoFavCards"></button>
+                        <button href="" id="botonCarritoAñadir${producto.id}" class="botonCarritoAñadir"
+                        onclick="añadirProductoAlCarrito(${producto.id})"><img src="./img/addCart.svg"
+                        alt="CarritoAñadir"></button>
+
+                    </div>
+                </div>
+            </article>
+        
+            `;
+        }
+        
+        
     });
    
-    
 
 })
 .catch((error) => console.error("No se pudo conseguir la data:", error));
@@ -275,7 +324,27 @@ function añadirProductoFavoritos(idProducto){
 
 // ****************************
 
-//ACORDEON CATEGORIAS
+//SLIDER DESTACADOS
+
+let botonesSlider = document.querySelectorAll(".botonSlider");
+let product = document.getElementsByClassName("tarjeta");
+let seccionProductos = document.querySelector("#seccionProductos");
+let seccionNuevos = document.querySelector("#seccionNuevos");
 
 
+let right_moverDestacados = ()=>{
+    seccionProductos.scrollLeft += 1435;
+}
+
+let left_moverDestacados = ()=>{
+   seccionProductos.scrollLeft -= 1435;
+}
+
+let right_moverNuevos = ()=>{
+    seccionNuevos.scrollLeft += 1435;
+}
+
+let left_moverNuevos = ()=>{
+   seccionNuevos.scrollLeft -= 1435;
+}
 
