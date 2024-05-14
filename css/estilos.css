@@ -433,6 +433,13 @@ footer {
 
 .c3 {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid var(--secundario);
+    border-radius: 20px;
+    width: 150px;
 }
 
 .c4 {
