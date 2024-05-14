@@ -1,0 +1,119 @@
+:root{
+    --bgColor2: white;
+    --bgColor : rgb(33,37,41);
+    --primario: rgb(79, 36, 164);
+    --secundario: #bd9bff;
+    --terciario: #9333ea;
+}
+
+
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+
+#contenedorEspecificaciones{   
+    border: 2px solid var(--secundario);
+    border-radius: 20px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+#contenedorPrecioImagen{
+    display: flex;
+}
+
+#imagenProducto{
+    width: 600px;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+#contenedorEspecificaciones article{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px 0px;
+}
+
+#precioContado{
+    border-bottom: 2px solid var(--secundario);
+    padding-bottom: 20px;
+}
+
+
+#precioContado div{
+    display: inline;
+    color: var(--terciario);
+}
+
+
+#precioFinanciado strong{
+    font-size: 30px;
+    color: var(--secundario);
+}
+
+#especificaciones{
+    display: flex;
+    flex-direction: row;
+}
+
+.logoTarjeta{
+    width: 50px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+#tarjetasCreditoAceptadas{
+    border-bottom: 2px solid var(--secundario);
+    padding-bottom: 20px;
+}
+
+#especificaciones h3{
+    border-bottom: 2px solid var(--secundario);
+    width: 370px;
+}
+
+#detalleEspecificaciones{
+    list-style-type: none;
+}
+
+#detalleEspecificaciones li{
+    width: 300px;
+    border-bottom: 1px solid var(--secundario);
+}
+
+#detalleEspecificaciones>li>ul{
+    list-style-type: none;
+}
+
+
+#conectividad ul{
+    list-style-type: none;
+}
+
+
+#botonAgregarCarrito{
+    display: inline-block;
+    background-color: var(--primario);
+    border-radius: 6px;
+    border: 0px;
+    width: 328px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    padding: 0 24px;
+    text-decoration: none;
+    color: white;
+}
+
+#botonAgregarCarrito:hover{
+    color: black;
+    background-color: var(--secundario);
+    transition: all 1s ;
+}

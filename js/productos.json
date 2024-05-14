@@ -11,7 +11,8 @@
         "enFavoritos": false,
         "destacado":true,
         "nuevo":false,
-        "cantidadEnCarrito": "0"        
+        "cantidadEnCarrito": "0",
+        "link": "./error404.html"        
     },
     {
         "id": 2,
@@ -37,7 +38,8 @@
         "enFavoritos": false,
         "destacado":true,
         "nuevo":false,
-        "cantidadEnCarrito": "0"
+        "cantidadEnCarrito": "0",
+        "link": "./productPage.html"
     },
     {
         "id": 3,
@@ -50,7 +52,8 @@
         "enFavoritos": false,
         "destacado":true,
         "nuevo":false,
-        "cantidadEnCarrito": "0"
+        "cantidadEnCarrito": "0",
+        "link": "./error404.html"
     },
     {
         "id": 4,
@@ -69,7 +72,8 @@
         "enFavoritos": false,
         "destacado":true,
         "nuevo":false,
-        "cantidadEnCarrito": "0"
+        "cantidadEnCarrito": "0",
+        "link": "./error404.html"
     },
     {
         "id": 5,
@@ -82,7 +86,8 @@
         "enFavoritos": false,
         "destacado":true,
         "nuevo":false,
-        "cantidadEnCarrito": "0"
+        "cantidadEnCarrito": "0",
+        "link": "./error404.html"
     },
     {
         "id": 6,
@@ -109,7 +114,7 @@
         "destacado":true,
         "nuevo":false,
         "cantidadEnCarrito": "0",
-        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
+        "link": "./productPage.html"
     },
     {
         "id": 7,
@@ -136,7 +141,7 @@
         "destacado":true,
         "nuevo":false,
         "cantidadEnCarrito": "0",
-        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
+        "link": "./productPage.html"
     },
     {
         "id": 8,
@@ -163,7 +168,7 @@
         "destacado":true,
         "nuevo":false,
         "cantidadEnCarrito": "0",
-        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
+        "link": "./productPage.html"
     },
     {
         "id": 9,
@@ -190,7 +195,7 @@
         "destacado":false,
         "nuevo":true,
         "cantidadEnCarrito": "0",
-        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
+        "link": "./productPage.html"
     },
     {
         "id": 10,
@@ -217,7 +222,7 @@
         "destacado":false,
         "nuevo":true,
         "cantidadEnCarrito": "0",
-        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
+        "link": "./productPage.html"
     },
     {
         "id": 11,
@@ -244,7 +249,7 @@
         "destacado":false,
         "nuevo":true,
         "cantidadEnCarrito": "0",
-        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
+        "link": "./productPage.html"
     },
     {
         "id": 12,
@@ -271,7 +276,7 @@
         "destacado":false,
         "nuevo":true,
         "cantidadEnCarrito": "0",
-        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
+        "link": "./productPage.html"
     },
     {
         "id": 13,
@@ -298,7 +303,7 @@
         "destacado":false,
         "nuevo":true,
         "cantidadEnCarrito": "0",
-        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
+        "link": "./productPage.html"
     },
     {
         "id": 14,
@@ -325,7 +330,7 @@
         "destacado":false,
         "nuevo":true,
         "cantidadEnCarrito": "0",
-        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
+        "link": "./productPage.html"
     },
     {
         "id": 15,
@@ -352,7 +357,7 @@
         "destacado":false,
         "nuevo":true,
         "cantidadEnCarrito": "0",
-        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
+        "link": "./productPage.html"
     },
     {
         "id": 16,
@@ -379,7 +384,7 @@
         "destacado":false,
         "nuevo":true,
         "cantidadEnCarrito": "0",
-        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
+        "link": "./productPage.html"
     },
     {
         "id": 17,
@@ -406,7 +411,7 @@
         "destacado":true,
         "nuevo":false,
         "cantidadEnCarrito": "0",
-        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
+        "link": "./productPage.html"
     },
     {
         "id": 18,
@@ -433,7 +438,7 @@
         "destacado":true,
         "nuevo":false,
         "cantidadEnCarrito": "0",
-        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
+        "link": "./productPage.html"
     },
     {
         "id": 19,
@@ -460,7 +465,7 @@
         "destacado":true,
         "nuevo":false,
         "cantidadEnCarrito": "0",
-        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
+        "link": "./productPage.html"
         
     },
     {
@@ -488,7 +493,7 @@
         "destacado":true,
         "nuevo":false,
         "cantidadEnCarrito": "0",
-        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
+        "link": "./productPage.html"
     },
     {
         "id": 21,
@@ -515,7 +520,7 @@
         "destacado":true,
         "nuevo":false,
         "cantidadEnCarrito": "0",
-        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
+        "link": "./productPage.html"
     },
     {
         "id": 22,
@@ -542,7 +547,7 @@
         "destacado":true,
         "nuevo":false,
         "cantidadEnCarrito": "0",
-        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
+        "link": "./productPage.html"
     }
 
     

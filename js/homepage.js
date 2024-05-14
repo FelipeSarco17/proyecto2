@@ -1,6 +1,7 @@
 let productosHomePage = [];
 let favoritosHomePage = [];
 let carritoHomePage = [];
+let productoElegido;
 
 fetch("./js/productos.json")
 .then(response => response.json())
@@ -24,7 +25,7 @@ fetch("./js/productos.json")
           
                 <div class="card-body">
 
-                    <a href=" ">
+                    <a href="${producto.link}" onclick="subirProductoElegido(${producto.id})">
                     <h5 class="card-title">${producto.nombre}</h5>
                     </a>
                     <div class="cardPrice">
@@ -48,7 +49,7 @@ fetch("./js/productos.json")
         
         if(producto.nuevo){
 
-            console.log("hola");
+            
 
             seccionNuevos.innerHTML += `
 
@@ -60,7 +61,7 @@ fetch("./js/productos.json")
           
                 <div class="card-body">
 
-                    <a href="${producto.link}">
+                    <a href="${producto.link}" onclick="subirProductoElegido(${producto.id})">
                     <h5 class="card-title">${producto.nombre}</h5>
                     </a>
                     <div class="cardPrice">
@@ -68,10 +69,10 @@ fetch("./js/productos.json")
                         $${producto.precio}
                         </p>
                         <div class="contenedorBotonesCards">
-                        <button href="" id="botonFavoritoAñadir${producto.id}" class="botonFavoritos"
+                        <button  id="botonFavoritoAñadir${producto.id}" class="botonFavoritos"
                          onclick="añadirProductoFavoritos(${producto.id})"><img src="./img/heartBlack.svg" alt="LogoFavoritos"
                         class="logoFavCards"></button>
-                        <button href="" id="botonCarritoAñadir${producto.id}" class="botonCarritoAñadir"
+                        <button  id="botonCarritoAñadir${producto.id}" class="botonCarritoAñadir"
                         onclick="añadirProductoAlCarrito(${producto.id})"><img src="./img/addCart.svg"
                         alt="CarritoAñadir"></button>
                         </div>
@@ -183,6 +184,10 @@ function cargarCarrito(data){
 
 function cargarUsuario(data){
     localStorage.setItem("usuarioLogueado",JSON.stringify(data));
+}
+
+function cargarProductoElegido(data){
+    localStorage.setItem("productoElegido",JSON.stringify(data))
 }
 
 // ****************************
@@ -354,4 +359,15 @@ let left_moverNuevos = ()=>{
 
 function cargarCategoria(data){
     localStorage.setItem("categoriaBuscada",JSON.stringify(data));
+}
+
+
+//CARGAR PRODUCTO ELEGIDO
+
+function subirProductoElegido(idProducto){
+    productosHomePage.forEach((producto)=>{
+        if(producto.id==idProducto){
+            cargarProductoElegido(producto);
+        }
+    });
 }
