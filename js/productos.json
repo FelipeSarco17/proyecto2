@@ -17,7 +17,7 @@
         "id": 2,
         "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
         "precio": "123551" ,
-        "categoria": "Placas de Video Radeon AMD ",
+        "categoria": "Placas de Video Radeon AMD",
         "especificaciones": {  "Tipo":"pcie",
                               "Ancho":"120mm",
                               "Largo":"270mm",
@@ -43,7 +43,7 @@
         "id": 3,
         "nombre": "Silla Gamer Corsair T3 Rush Fabric Carbon" ,
         "precio": "123550" ,
-        "categoria": "Sillas Gamer",
+        "categoria": "Sillas Gamers",
         "especificaciones": {"Peso Max": "120KG" },
         "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_36811_Silla_Gamer_Corsair_T3_Rush_Fabric_Carbon__Peso_MAX._120kg__88bef6b4-grn.jpg",
         "enCarrito": false,
@@ -75,7 +75,7 @@
         "id": 5,
         "nombre": "Monitor ASUS 21.5'' VP228HE" ,
         "precio": "123550" ,
-        "categoria": "Monitores",
+        "categoria": "Monitores y pantallas",
         "especificaciones": {"Panel":"TN","Conectividad":{"HDMI": "1","VGA":"1"}},
         "imagen":"https://imagenes.compragamer.com/productos/compragamer_Imganen_general_17959_Monitor_ASUS_21.5__VP228HE_TN_Full_HD_1ms_HDMI_VGA_Audio_0982edcc-grn.jpg",
         "enCarrito": false,
@@ -88,7 +88,7 @@
         "id": 6,
         "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
         "precio": "121234" ,
-        "categoria": "Placas de Video Radeon AMD ",
+        "categoria": "Placas de Video Radeon AMD",
         "especificaciones": {  "Tipo":"pcie",
                               "Ancho":"120mm",
                               "Largo":"270mm",
@@ -108,13 +108,14 @@
         "enFavoritos": false,
         "destacado":true,
         "nuevo":false,
-        "cantidadEnCarrito": "0"
+        "cantidadEnCarrito": "0",
+        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
     },
     {
         "id": 7,
         "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
         "precio": "123551" ,
-        "categoria": "Placas de Video Radeon AMD ",
+        "categoria": "Placas de Video Radeon AMD",
         "especificaciones": {  "Tipo":"pcie",
                               "Ancho":"120mm",
                               "Largo":"270mm",
@@ -134,13 +135,14 @@
         "enFavoritos": false,
         "destacado":true,
         "nuevo":false,
-        "cantidadEnCarrito": "0"
+        "cantidadEnCarrito": "0",
+        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
     },
     {
         "id": 8,
         "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
         "precio": "123551" ,
-        "categoria": "Placas de Video Radeon AMD ",
+        "categoria": "Placas de Video Radeon AMD",
         "especificaciones": {  "Tipo":"pcie",
                               "Ancho":"120mm",
                               "Largo":"270mm",
@@ -160,13 +162,14 @@
         "enFavoritos": false,
         "destacado":true,
         "nuevo":false,
-        "cantidadEnCarrito": "0"
+        "cantidadEnCarrito": "0",
+        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
     },
     {
         "id": 9,
         "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
         "precio": "123551" ,
-        "categoria": "Placas de Video Radeon AMD ",
+        "categoria": "Placas de Video Radeon AMD",
         "especificaciones": {  "Tipo":"pcie",
                               "Ancho":"120mm",
                               "Largo":"270mm",
@@ -186,13 +189,14 @@
         "enFavoritos": false,
         "destacado":false,
         "nuevo":true,
-        "cantidadEnCarrito": "0"
+        "cantidadEnCarrito": "0",
+        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
     },
     {
         "id": 10,
         "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
         "precio": "123551" ,
-        "categoria": "Placas de Video Radeon AMD ",
+        "categoria": "Placas de Video Radeon AMD",
         "especificaciones": {  "Tipo":"pcie",
                               "Ancho":"120mm",
                               "Largo":"270mm",
@@ -212,13 +216,14 @@
         "enFavoritos": false,
         "destacado":false,
         "nuevo":true,
-        "cantidadEnCarrito": "0"
+        "cantidadEnCarrito": "0",
+        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
     },
     {
         "id": 11,
         "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
         "precio": "123551" ,
-        "categoria": "Placas de Video Radeon AMD ",
+        "categoria": "Placas de Video Radeon AMD",
         "especificaciones": {  "Tipo":"pcie",
                               "Ancho":"120mm",
                               "Largo":"270mm",
@@ -238,13 +243,14 @@
         "enFavoritos": false,
         "destacado":false,
         "nuevo":true,
-        "cantidadEnCarrito": "0"
+        "cantidadEnCarrito": "0",
+        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
     },
     {
         "id": 12,
         "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
         "precio": "123551" ,
-        "categoria": "Placas de Video Radeon AMD ",
+        "categoria": "Placas de Video Radeon AMD",
         "especificaciones": {  "Tipo":"pcie",
                               "Ancho":"120mm",
                               "Largo":"270mm",
@@ -264,13 +270,14 @@
         "enFavoritos": false,
         "destacado":false,
         "nuevo":true,
-        "cantidadEnCarrito": "0"
+        "cantidadEnCarrito": "0",
+        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
     },
     {
         "id": 13,
         "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
         "precio": "123551" ,
-        "categoria": "Placas de Video Radeon AMD ",
+        "categoria": "Placas de Video Radeon AMD",
         "especificaciones": {  "Tipo":"pcie",
                               "Ancho":"120mm",
                               "Largo":"270mm",
@@ -290,13 +297,14 @@
         "enFavoritos": false,
         "destacado":false,
         "nuevo":true,
-        "cantidadEnCarrito": "0"
+        "cantidadEnCarrito": "0",
+        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
     },
     {
         "id": 14,
         "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
         "precio": "123551" ,
-        "categoria": "Placas de Video Radeon AMD ",
+        "categoria": "Placas de Video Radeon AMD",
         "especificaciones": {  "Tipo":"pcie",
                               "Ancho":"120mm",
                               "Largo":"270mm",
@@ -316,13 +324,14 @@
         "enFavoritos": false,
         "destacado":false,
         "nuevo":true,
-        "cantidadEnCarrito": "0"
+        "cantidadEnCarrito": "0",
+        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
     },
     {
         "id": 15,
         "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
         "precio": "123551" ,
-        "categoria": "Placas de Video Radeon AMD ",
+        "categoria": "Placas de Video Radeon AMD",
         "especificaciones": {  "Tipo":"pcie",
                               "Ancho":"120mm",
                               "Largo":"270mm",
@@ -342,13 +351,14 @@
         "enFavoritos": false,
         "destacado":false,
         "nuevo":true,
-        "cantidadEnCarrito": "0"
+        "cantidadEnCarrito": "0",
+        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
     },
     {
         "id": 16,
         "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
         "precio": "123551" ,
-        "categoria": "Placas de Video Radeon AMD ",
+        "categoria": "Placas de Video Radeon AMD",
         "especificaciones": {  "Tipo":"pcie",
                               "Ancho":"120mm",
                               "Largo":"270mm",
@@ -368,7 +378,171 @@
         "enFavoritos": false,
         "destacado":false,
         "nuevo":true,
-        "cantidadEnCarrito": "0"
+        "cantidadEnCarrito": "0",
+        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
+    },
+    {
+        "id": 17,
+        "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
+        "precio": "123551" ,
+        "categoria": "Placas de Video Radeon AMD",
+        "especificaciones": {  "Tipo":"pcie",
+                              "Ancho":"120mm",
+                              "Largo":"270mm",
+                              "Espesor":"2 Slots",
+                              "Conectividad": {
+                                                "Dvi": "1",
+                                                "HDMI": "1",
+                                                "DisplayPorts": "3"
+                                                }
+                              
+
+        
+                            },
+                
+        "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_39191_Placa_de_Video_XFX_Radeon_RX_580_8GB_GDDR5_GTS_2048SP_8c7b9091-grn.jpg",
+        "enCarrito": false,
+        "enFavoritos": false,
+        "destacado":true,
+        "nuevo":false,
+        "cantidadEnCarrito": "0",
+        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
+    },
+    {
+        "id": 18,
+        "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
+        "precio": "123551" ,
+        "categoria": "Placas de Video Radeon AMD",
+        "especificaciones": {  "Tipo":"pcie",
+                              "Ancho":"120mm",
+                              "Largo":"270mm",
+                              "Espesor":"2 Slots",
+                              "Conectividad": {
+                                                "Dvi": "1",
+                                                "HDMI": "1",
+                                                "DisplayPorts": "3"
+                                                }
+                              
+
+        
+                            },
+                
+        "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_39191_Placa_de_Video_XFX_Radeon_RX_580_8GB_GDDR5_GTS_2048SP_8c7b9091-grn.jpg",
+        "enCarrito": false,
+        "enFavoritos": false,
+        "destacado":true,
+        "nuevo":false,
+        "cantidadEnCarrito": "0",
+        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
+    },
+    {
+        "id": 19,
+        "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
+        "precio": "123551" ,
+        "categoria": "Placas de Video Radeon AMD",
+        "especificaciones": {  "Tipo":"pcie",
+                              "Ancho":"120mm",
+                              "Largo":"270mm",
+                              "Espesor":"2 Slots",
+                              "Conectividad": {
+                                                "Dvi": "1",
+                                                "HDMI": "1",
+                                                "DisplayPorts": "3"
+                                                }
+                              
+
+        
+                            },
+                
+        "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_39191_Placa_de_Video_XFX_Radeon_RX_580_8GB_GDDR5_GTS_2048SP_8c7b9091-grn.jpg",
+        "enCarrito": false,
+        "enFavoritos": false,
+        "destacado":true,
+        "nuevo":false,
+        "cantidadEnCarrito": "0",
+        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
+        
+    },
+    {
+        "id": 20,
+        "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
+        "precio": "123551" ,
+        "categoria": "Placas de Video Radeon AMD",
+        "especificaciones": {  "Tipo":"pcie",
+                              "Ancho":"120mm",
+                              "Largo":"270mm",
+                              "Espesor":"2 Slots",
+                              "Conectividad": {
+                                                "Dvi": "1",
+                                                "HDMI": "1",
+                                                "DisplayPorts": "3"
+                                                }
+                              
+
+        
+                            },
+                
+        "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_39191_Placa_de_Video_XFX_Radeon_RX_580_8GB_GDDR5_GTS_2048SP_8c7b9091-grn.jpg",
+        "enCarrito": false,
+        "enFavoritos": false,
+        "destacado":true,
+        "nuevo":false,
+        "cantidadEnCarrito": "0",
+        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
+    },
+    {
+        "id": 21,
+        "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
+        "precio": "123551" ,
+        "categoria": "Placas de Video Radeon AMD",
+        "especificaciones": {  "Tipo":"pcie",
+                              "Ancho":"120mm",
+                              "Largo":"270mm",
+                              "Espesor":"2 Slots",
+                              "Conectividad": {
+                                                "Dvi": "1",
+                                                "HDMI": "1",
+                                                "DisplayPorts": "3"
+                                                }
+                              
+
+        
+                            },
+                
+        "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_39191_Placa_de_Video_XFX_Radeon_RX_580_8GB_GDDR5_GTS_2048SP_8c7b9091-grn.jpg",
+        "enCarrito": false,
+        "enFavoritos": false,
+        "destacado":true,
+        "nuevo":false,
+        "cantidadEnCarrito": "0",
+        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
+    },
+    {
+        "id": 22,
+        "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
+        "precio": "123551" ,
+        "categoria": "Placas de Video Radeon AMD",
+        "especificaciones": {  "Tipo":"pcie",
+                              "Ancho":"120mm",
+                              "Largo":"270mm",
+                              "Espesor":"2 Slots",
+                              "Conectividad": {
+                                                "Dvi": "1",
+                                                "HDMI": "1",
+                                                "DisplayPorts": "3"
+                                                }
+                              
+
+        
+                            },
+                
+        "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_39191_Placa_de_Video_XFX_Radeon_RX_580_8GB_GDDR5_GTS_2048SP_8c7b9091-grn.jpg",
+        "enCarrito": false,
+        "enFavoritos": false,
+        "destacado":true,
+        "nuevo":false,
+        "cantidadEnCarrito": "0",
+        "link": "./placaDeVideoXFXRadeonRX5808GBGDDR5.html"
     }
 
     

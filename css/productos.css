@@ -1,0 +1,77 @@
+:root {
+    --bgColor2: white;
+    --bgColor: rgb(33, 37, 41);
+    --primario: rgb(79, 36, 164);
+    --secundario: #bd9bff;
+    --terciario: #9333ea;
+}
+
+#productosCategoria{
+    width: 950px;
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px 200px;
+    grid-template-rows: 300px 300px 300px ;
+    gap: 20px 10px ;
+}
+
+.tarjetaProductoCategoria{
+
+    max-width: 200px;
+    height: 300px;
+    background-color: white;
+    border-radius: 20px;
+    
+}
+
+.imgProductoCategoria{
+    width: 100px;
+ }
+
+.imgProductoCategoria img{
+    width: 150px;
+    margin-left: 25px;
+}
+
+.card-body-categoria h5{
+    color: black;
+    font-size: 17px;
+    padding:10px;
+}
+
+.card-body-categoria{
+    text-align: start;
+}
+.card-body-categoria h5{
+    color: black;
+    text-decoration: none;
+}
+
+.card-body-categoria h5:hover{
+    text-decoration: underline;
+    color: var(--terciario);
+}   
+
+.tarjeta-text-categoria{
+    font-size: 17px;
+    padding-left: 10px;
+}
+
+.contenedorBotonesCardsCategoria{
+    display: flex;
+    justify-content: space-between;
+    gap: 0px 20px;
+    padding: 0px 10px;
+}
+
+
+#contenedorPublicidadCategoria{
+    width: 360px;
+    margin-left: 90px;
+    margin-right: 20px;
+}
+
+#contenedorPublicidadesCategoria{
+    display: flex;
+    flex-direction: column;
+    gap: 30px 0px;
+}

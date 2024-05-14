@@ -92,8 +92,14 @@ main{
     padding-left: 20px;
     padding-top: 10px ;
     text-wrap: wrap;
+    color: black;
 }
 
+
+.textoProductoCarrito h4:hover{
+    color: var(--terciario);
+    text-decoration: underline;
+}
 
 .botonesCarrito{
     display: flex;

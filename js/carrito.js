@@ -112,7 +112,7 @@ function actualizarLista(){
                 <div class="textoProductoCarrito">
                     <img class="imgProductoCarrito" src="${productoCarrito.imagen}" alt="">
            
-                    <h4 class="nombreProducto">${productoCarrito.nombre}</h4>
+                    <a href="${productoCarrito.link}"><h4 class="nombreProducto">${productoCarrito.nombre}</h4></a>
                  </div>
         
                 <div class="botonesCarrito">

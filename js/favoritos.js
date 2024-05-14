@@ -61,7 +61,7 @@ function actualizarLista(){
             <article class="productoFavorito">
                 <div class="textoProductoFavorito">
                     <img class="imgProductoFavorito" src="${productoFavorito.imagen}" alt="">
-                    <h4 class="nombreProducto">${productoFavorito.nombre}</h4>
+                    <a href="${productoFavorito.link}"><h4 class="nombreProducto">${productoFavorito.nombre}</h4></a>
                 </div>
     
                 <div class="botonesProductosFavoritos">

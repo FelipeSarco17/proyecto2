@@ -79,6 +79,13 @@
     padding-left: 20px;
     padding-top: 10px ;
     text-wrap: wrap;
+    color: black;
+}
+
+
+.textoProductoFavorito h4:hover{
+    text-decoration: underline;
+    color: var(--terciario);
 }
 
 

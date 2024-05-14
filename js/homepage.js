@@ -10,9 +10,9 @@ fetch("./js/productos.json")
      
         let seccionProductos = document.querySelector("#seccionProductos");
         let seccionNuevos = document.querySelector("#seccionNuevos");
+        cargarProductos();
         productosHomePage.forEach((producto)=>{
-            cargarProductos();
-        
+            
         if(producto.destacado){
             seccionProductos.innerHTML += `
 
@@ -31,14 +31,14 @@ fetch("./js/productos.json")
                         <p class="tarjeta-text">
                         $${producto.precio}
                         </p>
-
+                        <div class="contenedorBotonesCards">
                         <button href="" id="botonFavoritoAñadir${producto.id}" class="botonFavoritos"
                          onclick="añadirProductoFavoritos(${producto.id})"><img src="./img/heartBlack.svg" alt="LogoFavoritos"
                         class="logoFavCards"></button>
                         <button href="" id="botonCarritoAñadir${producto.id}" class="botonCarritoAñadir"
                         onclick="añadirProductoAlCarrito(${producto.id})"><img src="./img/addCart.svg"
                         alt="CarritoAñadir"></button>
-
+                        </div>
                     </div>
                 </div>
             </article>
@@ -60,21 +60,21 @@ fetch("./js/productos.json")
           
                 <div class="card-body">
 
-                    <a href=" ">
+                    <a href="${producto.link}">
                     <h5 class="card-title">${producto.nombre}</h5>
                     </a>
                     <div class="cardPrice">
                         <p class="tarjeta-text">
                         $${producto.precio}
                         </p>
-
+                        <div class="contenedorBotonesCards">
                         <button href="" id="botonFavoritoAñadir${producto.id}" class="botonFavoritos"
                          onclick="añadirProductoFavoritos(${producto.id})"><img src="./img/heartBlack.svg" alt="LogoFavoritos"
                         class="logoFavCards"></button>
                         <button href="" id="botonCarritoAñadir${producto.id}" class="botonCarritoAñadir"
                         onclick="añadirProductoAlCarrito(${producto.id})"><img src="./img/addCart.svg"
                         alt="CarritoAñadir"></button>
-
+                        </div>
                     </div>
                 </div>
             </article>
@@ -348,3 +348,10 @@ let left_moverNuevos = ()=>{
    seccionNuevos.scrollLeft -= 920;
 }
 
+
+//ACORDEON CATEGORIAS
+
+
+function cargarCategoria(data){
+    localStorage.setItem("categoriaBuscada",JSON.stringify(data));
+}
