@@ -1,0 +1,39 @@
+:root {
+    --bgColor2: white;
+    --bgColor: rgb(33, 37, 41);
+    --primario: rgb(79, 36, 164);
+    --secundario: #bd9bff;
+    --terciario: #9333ea;
+}
+
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#seccionError404{
+    width: 80%;
+    
+    border: 2px solid var(--secundario);
+    border-radius: 20px;
+}
+
+#articuloError404{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#articuloError404 h2{
+    font-size: 100px;
+}
+
+
+#articuloError404 p{
+    font-size: 20px;
+}
