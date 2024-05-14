@@ -1,379 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/estilos.css"> 
-    <link rel="stylesheet" href="./css/favoritos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/estilos.css">
+  <link rel="stylesheet" href="./css/favoritos.css">
 </head>
+
 <body>
-    <header>
-        <nav>
+  <header>
+    <nav>
 
-            <a href="./index.html"><img src="../img/logo2-removebg-preview.png" alt="logo" class="logoDragonNav"></a>
-            <div id="navParteIzquierda">
-                <a href="./index.html">Home</a>
-                <a href="./destacados.html">Destacados</a>
-                <a href="./contacto.html">Contacto</a>
-            </div>
-                
-            <div id="navParteDerecha">
-                <a href="./error404.html" class="contenedorFavCart" id="ayuda"><img src="../img/helpIcon.svg" alt="logoAyuda" class="favCart"></a>
-                <a href="./favoritos.html" class="contenedorFavCart" id="favoritos">
-                    <img src="./img/heart.svg" alt="LogoFavoritos" class="favCart">
-                    <span id="contadorFavs" class="contadorFavCart">0</span>
-                </a>
-                <a href="./carrito.html" class="contenedorFavCart" id="carrito">
-                    <img src="./img/cart3.svg" alt="LogoCarrito" class="favCart">
-                    <span id="contadorCarrito" class="contadorFavCart">0</span>
-                </a>
-                <button id="botonLogIn" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModalToggle"><img src="./img/user.svg" alt="LogoUser">Iniciar Sesion</button>
-            </div>
+      <a href="./index.html"><img src="../img/logo2-removebg-preview.png" alt="logo" class="logoDragonNav"></a>
+      <div id="navParteIzquierda">
+        <a href="./index.html">Home</a>
+        <a href="./destacados.html">Destacados</a>
+        <a href="./contacto.html">Contacto</a>
+      </div>
 
-            <button type="button" id="collapseButton"><img src="./img/collapseIcon.svg" alt="collapseIcon" id="collapseIcon"></button>
-            
-        </nav>
+      <div id="navParteDerecha">
+        <a href="./error404.html" class="contenedorFavCart" id="ayuda"><img src="../img/helpIcon.svg" alt="logoAyuda"
+            class="favCart"></a>
+        <a href="./favoritos.html" class="contenedorFavCart" id="favoritos">
+          <img src="./img/heart.svg" alt="LogoFavoritos" class="favCart">
+          <span id="contadorFavs" class="contadorFavCart">0</span>
+        </a>
+        <a href="./carrito.html" class="contenedorFavCart" id="carrito">
+          <img src="./img/cart3.svg" alt="LogoCarrito" class="favCart">
+          <span id="contadorCarrito" class="contadorFavCart">0</span>
+        </a>
+        <button id="botonLogIn" type="button" class="btn" data-bs-toggle="modal"
+          data-bs-target="#exampleModalToggle"><img src="./img/user.svg" alt="LogoUser">Iniciar Sesion</button>
+      </div>
+
+      <button type="button" id="collapseButton"><img src="./img/collapseIcon.svg" alt="collapseIcon"
+          id="collapseIcon"></button>
+
+    </nav>
 
 
-        <!-- MODAL -->
-        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content bg-dark text-white">
-              <div class="modal-header">
-                <img src="./img/logo2-removebg-preview.png" alt="logoDragon" id="logoDragonModal">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel">¡Bienvenido a Wyvern!</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <!-- MODAL -->
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+      tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-white">
+          <div class="modal-header">
+            <img src="./img/logo2-removebg-preview.png" alt="logoDragon" id="logoDragonModal">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">¡Bienvenido a Wyvern!</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="modalBodyLogin">
+            <form action="" id="formLogin">
+
+              <label for="inputEmail"><img src="./img/user.svg" alt="logoUser">Email</label>
+              <input type="text" name="email" id="inputEmail" required>
+              <label for="inputPass"><img src="./img/logoPassword.svg" alt="logoPassword">Contraseña</label>
+              <input type="password" name="pass" id="inputPass" required>
+            </form>
+            <p id="linksModal"><a href="" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">¿No tienes una
+                cuenta?</a> <a href="">¿Olvidaste tu contraseña?</a></p>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="botones" data-bs-dismiss="modal" id="botonModalLogin">Iniciar Sesion</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+      tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-white">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Crea tu cuenta</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="" id="formRegister">
+
+              <div class="campoFormRegister">
+                <label for="">Nombre</label>
+                <input type="text" name="nombre" id="nombreCliente" class="inputRegistro">
               </div>
-              <div class="modal-body" id="modalBodyLogin">
-                <form action="" id="formLogin">
 
-                    <label for="inputEmail"><img src="./img/user.svg" alt="logoUser">Email</label>
-                    <input type="text" name="email" id="inputEmail" required>
-                    <label for="inputPass"><img src="./img/logoPassword.svg" alt="logoPassword">Contraseña</label>
-                    <input type="password" name="pass" id="inputPass" required>
-                </form>
-                <p id="linksModal"><a href="" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">¿No tienes una cuenta?</a> <a href="">¿Olvidaste tu contraseña?</a></p>
+              <div class="campoFormRegister">
+                <label for="">Apellido</label>
+                <input type="text" name="apellido" id="apellidoCliente" class="inputRegistro">
+              </div>
 
+              <div class="campoFormRegister">
+                <label for="">Domicilio</label>
+                <input type="text" name="domicilio" id="domicilioCliente" class="inputRegistro">
               </div>
-              <div class="modal-footer">
-                <button type="button" class="botones" data-bs-dismiss="modal" id="botonModalLogin">Iniciar Sesion</button>
+
+              <div class="campoFormRegister">
+                <label for="">Telefono</label>
+                <input type="text" name="telefono" id="telefonoCliente" class="inputRegistro">
               </div>
+
+              <div class="campoFormRegister">
+                <label for="ingresarEmail">E-mail</label>
+                <input type="text" name="email" id="inputEmailRegistro" required class="inputRegistro">
+              </div>
+
+              <div class="campoFormRegister">
+                <label for="ingresarPass">Contraseña</label>
+                <input type="password" name="pass" id="inputPassRegistro" required class="inputRegistro">
+              </div>
+
+              <div class="campoFormRegister">
+                <label for="confirmarPass">Confirmar contraseña</label>
+                <input type="text" name="confirmPass" id="confirmarPass" class="inputRegistro">
+              </div>
+
+            </form>
+
+            <div class="modal-footer">
+              <button type="button" class="botones" data-bs-dismiss="modal" id="botonRegistrarse">Registrarse</button>
             </div>
           </div>
         </div>
+      </div>
+    </div>
 
-        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content bg-dark text-white">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Crea tu cuenta</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <form action="" id="formRegister">
-                    
-                    <div class="campoFormRegister">
-                      <label for="">Nombre</label>
-                      <input type="text" name="nombre" id="nombreCliente" class="inputRegistro">
-                    </div>
-                    
-                    <div class="campoFormRegister">
-                      <label for="">Apellido</label>
-                      <input type="text" name="apellido" id="apellidoCliente" class="inputRegistro">
-                    </div>
+  </header>
 
-                    <div class="campoFormRegister">
-                      <label for="">Domicilio</label>
-                      <input type="text" name="domicilio" id="domicilioCliente" class="inputRegistro">
-                    </div>
 
-                    <div class="campoFormRegister">
-                      <label for="">Telefono</label>
-                      <input type="text" name="telefono" id="telefonoCliente" class="inputRegistro">
-                    </div>
 
-                    <div class="campoFormRegister">
-                      <label for="ingresarEmail">E-mail</label>
-                      <input type="text" name="email" id="inputEmailRegistro" required class="inputRegistro">
-                    </div>
+  <main>
 
-                    <div class="campoFormRegister">
-                      <label for="ingresarPass">Contraseña</label>
-                      <input type="password" name="pass" id="inputPassRegistro" required class="inputRegistro">
-                    </div>
-
-                    <div class="campoFormRegister">
-                      <label for="confirmarPass">Confirmar contraseña</label>
-                      <input type="text" name="confirmPass" id="confirmarPass" class="inputRegistro">
-                    </div>
-     
-                </form>
-
-              <div class="modal-footer">
-                <button type="button" class="botones" data-bs-dismiss="modal" id="botonRegistrarse">Registrarse</button>
+    <section id="seccionAcordeonPublicidad">
+      <article id="contenedorAcordeon">
+        <div class="accordion accordion-flush" id="accordionCategorias">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelProcesadores" aria-expanded="false" aria-controls="panelProcesadores">
+                Procesadores
+              </button>
+            </h2>
+            <div id="panelProcesadores" class="accordion-collapse collapse" data-bs-parent="#accordionCategorias">
+              <div class="accordion-body">
+                <ul class="listasCategorias">
+                  <li><a href="">Procesadores Intel</a></li>
+                  <li><a href="">Procesadores AMD</a></li>
+                </ul>
               </div>
             </div>
           </div>
-        </div>
-        </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelMothers" aria-expanded="false" aria-controls="panelMothers">
+                Mothers
+              </button>
+            </h2>
+            <div id="panelMothers" class="accordion-collapse collapse" data-bs-parent="#accordionCategorias">
+              <div class="accordion-body">
 
-    </header>
+                <ul class="listasCategorias">
+                  <li><a href="">Placas de Video GeForce</a></li>
+                  <li><a href="">Placas de Video Radeon AMD </a></li>
+                </ul>
 
-
-
-    <main>  
-       
-        <section id="seccionAcordeonPublicidad">
-            <article id="contenedorAcordeon">
-            <div class="accordion accordion-flush" id="accordionCategorias">
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelProcesadores" aria-expanded="false" aria-controls="panelProcesadores">
-                    Procesadores
-                  </button>
-                </h2>
-                <div id="panelProcesadores" class="accordion-collapse collapse" data-bs-parent="#accordionCategorias">
-                  <div class="accordion-body">
-                    <ul class="listasCategorias">
-                      <li><a href="">Procesadores Intel</a></li>
-                      <li><a href="">Procesadores AMD</a></li>
-                    </ul>
-                  </div>
-                </div>
               </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelMothers" aria-expanded="false" aria-controls="panelMothers">
-                    Mothers
-                  </button>
-                </h2>
-                <div id="panelMothers" class="accordion-collapse collapse" data-bs-parent="#accordionCategorias">
-                  <div class="accordion-body">
-                    
-                    <ul class="listasCategorias">
-                      <li><a href="">Placas de Video GeForce</a></li>
-                      <li><a href="">Placas de Video Radeon AMD </a></li>
-                    </ul>
-                  
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelPlacas" aria-expanded="false" aria-controls="panelPlacas">
-                    Placa de Video
-                  </button>
-                </h2>
-                <div id="panelPlacas" class="accordion-collapse collapse" data-bs-parent="#accordionCategorias">
-                  <div class="accordion-body">
-                      <ul class="listasCategorias">
-                        <li><a href="">Placa de Video GeForce</a></li>
-                        <li><a href="">Placa de Video Radeon AMD </a></li>
-                      </ul>
-                  </div>
-                </div>
-              </div>
-      
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelMemorias" aria-expanded="false" aria-controls="panelMemorias">
-                    Memorias RAM
-                  </button>
-                </h2>
-                <div id="panelMemorias" class="accordion-collapse collapse" data-bs-parent="#accordionCategorias">
-                  <div class="accordion-body">
-                      <ul class="listasCategorias">
-                        <li><a href="">Memorias</a></li>
-                        <li><a href="">Memorias Notebook</a></li>
-                      </ul>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelAlmacenamiento" aria-expanded="false" aria-controls="panelAlmacenamiento">
-                   Almacenamiento
-                  </button>
-                </h2>
-                <div id="panelAlmacenamiento" class="accordion-collapse collapse" data-bs-parent="#accordionCategorias">
-                  <div class="accordion-body">
-                      <ul class="listasCategorias">
-                        <li><a href="">Discos Externos</a></li>
-                        <li><a href="">Discos Rigidos</a></li>
-                        <li><a href="">Discos Solidos SSD</a></li>
-                      </ul>
-                  </div>
-                </div>
-              </div>
-      
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelPerifericos" aria-expanded="false" aria-controls="panelPerifericos">
-                   Perifericos
-                  </button>
-                </h2>
-                <div id="panelPerifericos" class="accordion-collapse collapse" data-bs-parent="#accordionCategorias">
-                  <div class="accordion-body">
-                      <ul class="listasCategorias">
-                        <li><a href="">Auriculares</a></li>
-                        <li><a href="">Teclados</a></li>
-                        <li><a href="">Mouses</a></li>
-                        <li><a href="">Mouse Pads</a></li>
-                        <li><a href="">Microfonos</a></li>
-                        <li><a href="">Webcam</a></li>
-                        <li><a href="">Joystick</a></li>
-                        <li><a href="">Parlantes</a></li>
-                      </ul>
-                  </div>
-                </div>
-              </div>
-      
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelGabinetes" aria-expanded="false" aria-controls="panelGabinetes">
-                      Gabinetes
-                  </button>
-                </h2>
-                <div id="panelGabinetes" class="accordion-collapse collapse" data-bs-parent="#accordionCategorias">
-                  <div class="accordion-body">
-                      <ul class="listasCategorias">
-                        <li><a href="">Gabinetes</a></li>
-                      </ul>
-                  </div>
-                </div>
-              </div>
-      
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelFuentes" aria-expanded="false" aria-controls="panelFuentes">
-                      Fuentes
-                  </button>
-                </h2>
-                <div id="panelFuentes" class="accordion-collapse collapse" data-bs-parent="#accordionCategorias">
-                  <div class="accordion-body">
-                      <ul class="listasCategorias">
-                        <li><a href="">Fuentes</a></li>
-                      </ul>
-                  </div>
-                </div>
-              </div>
-      
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelMonitores" aria-expanded="false" aria-controls="panelMonitores">
-                      Monitores
-                  </button>
-                </h2>
-                <div id="panelMonitores" class="accordion-collapse collapse" data-bs-parent="#accordionCategorias">
-                  <div class="accordion-body">
-                      <ul class="listasCategorias">
-                        <li><a href="">Monitores y pantallas</a></li>
-                      </ul>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelSillas" aria-expanded="false" aria-controls="panelSillas">
-                      Sillas Gamers
-                  </button>
-                </h2>
-                <div id="panelSillas" class="accordion-collapse collapse" data-bs-parent="#accordionCategorias">
-                  <div class="accordion-body">
-                      <ul class="listasCategorias">
-                        <li><a href="">Sillas Gamers</a></li>
-                      </ul>
-                  </div>
-                </div>
-              </div>
-      
-      
             </div>
-          </article>
-    
-    
-          <article id="contenedorPublicidad">
-                <!-- PUBLICIDAD -->
-    
-                <div id="publicidad" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                  <div class="carousel-inner d-none d-md-block">
-                    <div class="carousel-item active">
-                      <img src="https://cocktail.pe/wp-content/uploads/2023/04/Sand-Tasty-vertical_4-760x1024.jpg" class="d-block w-100 " alt="publicidadMcDonalds">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="https://i.pinimg.com/originals/0a/f8/2d/0af82d5a0a8630df636f5b32e200fd3b.jpg" class="d-block w-100 " alt="publicidadCocaCola">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="https://cdn.bioguia.com/embed/01482b001a05f0597236dcf5144d21620637220/absolut-vodka-publicidad-vertical.jpg?imagick=1&size=750" class=" d-block w-100 " alt="publicidadVodka">
-                    </div>
-                  </div>
-    
-          </article>
-    
-        </section>
-        
-        <div id="contenedorlistadoFavoritos">
-            <h2 id="tituloFavoritos">Tus Favoritos</h2>
-            <section id="listadoFavoritos">
-                
-                <div id="favoritosVacio">
-                    <img src="./img/heartFill.svg" alt="logoCorazonLleno">
-                    <h4>Todavia no tienes ningun producto en Favoritos</h4>
-                    <a href="./index.html" id="botonDescubrirProducto">Descubrir productos</a>
-                </div>
-    
-            </section>
-    
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelPlacas" aria-expanded="false" aria-controls="panelPlacas">
+                Placa de Video
+              </button>
+            </h2>
+            <div id="panelPlacas" class="accordion-collapse collapse" data-bs-parent="#accordionCategorias">
+              <div class="accordion-body">
+                <ul class="listasCategorias">
+                  <li><a href="">Placa de Video GeForce</a></li>
+                  <li><a href="">Placa de Video Radeon AMD </a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelMemorias" aria-expanded="false" aria-controls="panelMemorias">
+                Memorias RAM
+              </button>
+            </h2>
+            <div id="panelMemorias" class="accordion-collapse collapse" data-bs-parent="#accordionCategorias">
+              <div class="accordion-body">
+                <ul class="listasCategorias">
+                  <li><a href="">Memorias</a></li>
+                  <li><a href="">Memorias Notebook</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelAlmacenamiento" aria-expanded="false" aria-controls="panelAlmacenamiento">
+                Almacenamiento
+              </button>
+            </h2>
+            <div id="panelAlmacenamiento" class="accordion-collapse collapse" data-bs-parent="#accordionCategorias">
+              <div class="accordion-body">
+                <ul class="listasCategorias">
+                  <li><a href="">Discos Externos</a></li>
+                  <li><a href="">Discos Rigidos</a></li>
+                  <li><a href="">Discos Solidos SSD</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelPerifericos" aria-expanded="false" aria-controls="panelPerifericos">
+                Perifericos
+              </button>
+            </h2>
+            <div id="panelPerifericos" class="accordion-collapse collapse" data-bs-parent="#accordionCategorias">
+              <div class="accordion-body">
+                <ul class="listasCategorias">
+                  <li><a href="">Auriculares</a></li>
+                  <li><a href="">Teclados</a></li>
+                  <li><a href="">Mouses</a></li>
+                  <li><a href="">Mouse Pads</a></li>
+                  <li><a href="">Microfonos</a></li>
+                  <li><a href="">Webcam</a></li>
+                  <li><a href="">Joystick</a></li>
+                  <li><a href="">Parlantes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelGabinetes" aria-expanded="false" aria-controls="panelGabinetes">
+                Gabinetes
+              </button>
+            </h2>
+            <div id="panelGabinetes" class="accordion-collapse collapse" data-bs-parent="#accordionCategorias">
+              <div class="accordion-body">
+                <ul class="listasCategorias">
+                  <li><a href="">Gabinetes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelFuentes" aria-expanded="false" aria-controls="panelFuentes">
+                Fuentes
+              </button>
+            </h2>
+            <div id="panelFuentes" class="accordion-collapse collapse" data-bs-parent="#accordionCategorias">
+              <div class="accordion-body">
+                <ul class="listasCategorias">
+                  <li><a href="">Fuentes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelMonitores" aria-expanded="false" aria-controls="panelMonitores">
+                Monitores
+              </button>
+            </h2>
+            <div id="panelMonitores" class="accordion-collapse collapse" data-bs-parent="#accordionCategorias">
+              <div class="accordion-body">
+                <ul class="listasCategorias">
+                  <li><a href="">Monitores y pantallas</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelSillas" aria-expanded="false" aria-controls="panelSillas">
+                Sillas Gamers
+              </button>
+            </h2>
+            <div id="panelSillas" class="accordion-collapse collapse" data-bs-parent="#accordionCategorias">
+              <div class="accordion-body">
+                <ul class="listasCategorias">
+                  <li><a href="">Sillas Gamers</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </article>
+
+
+
+
+    </section>
+
+    <div id="contenedorlistadoFavoritos">
+      <h2 id="tituloFavoritos">Tus Favoritos</h2>
+      <section id="listadoFavoritos">
+
+        <div id="favoritosVacio">
+          <img src="./img/heartFill.svg" alt="logoCorazonLleno">
+          <h4>Todavia no tienes ningun producto en Favoritos</h4>
+          <a href="./index.html" id="botonDescubrirProducto">Descubrir productos</a>
         </div>
 
-         
-      
+      </section>
 
-    </main>
+    </div>
 
+    <section>
+      <article id="contenedorPublicidadFavoritos">
+        <!-- PUBLICIDAD -->
 
-    <footer>
-
-        <img src="./img/logo2-removebg-preview.png" alt="logoDragon" id="logoDragonFooter">
-  
-        <div id="contenedorLinksFooter">
-  
-          <div class="c1">
-            <ul id="linksFooter">
-              <li><a href="">Home</a></li>
-              <li><a href="">Destacados</a></li>
-              <li><a href="">Contacto</a></li>
-              <li><a href="">Ayuda</a></li>
-            </ul>
+        <div id="publicidad" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-inner d-none d-md-block">
+            <div class="carousel-item active">
+              <img src="https://cocktail.pe/wp-content/uploads/2023/04/Sand-Tasty-vertical_4-760x1024.jpg"
+                class="d-block w-100 " alt="publicidadMcDonalds">
+            </div>
+            <div class="carousel-item">
+              <img src="https://i.pinimg.com/originals/0a/f8/2d/0af82d5a0a8630df636f5b32e200fd3b.jpg"
+                class="d-block w-100 " alt="publicidadCocaCola">
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://cdn.bioguia.com/embed/01482b001a05f0597236dcf5144d21620637220/absolut-vodka-publicidad-vertical.jpg?imagick=1&size=750"
+                class=" d-block w-100 " alt="publicidadVodka">
+            </div>
           </div>
-          <div class="c2">        
-            <ul id="redesFooter">
-              <li><a href="https://www.tiktok.com/es/" target="_blank" ><i class="fa-brands fs-1 fa-tiktok mx-2 mx-lg-3 mx-md-2" id="tiktok"></i></a></li>
-              <li><a href="https://www.instagram.com/" target="_blank" ><i class="fa-brands fs-1 fa-instagram mx-2 mx-lg-3 mx-md-2" id="instagram"></i></a></li>
-              <li><a href="https://www.youtube.com/" target="_blank" ><i class="fa-brands fs-1 fa-youtube mx-2 mx-lg-3 mx-md-2" id="youtube"></i></a></li>
-              <li><a href="https://twitter.com/?lang=es" target="_blank" ><i class="fa-brands fs-1 fa-square-x-twitter mx-2 mx-lg-3 mx-md-2" id="twitter"></i></a></li>
-            </ul>
-          </div>
-          <div class="c3">Data Fiscal <img src="./img/codigo_qr.png" alt="dataFiscalQR" id="dataFiscalQR"></div>
-          <div class="c4">©2024 Wyvern Components. Todos los derechos reservados.</div>
-  
-  
-  
-        </div>
-  
-      </footer>
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"  crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/ebd81ac4a4.js" crossorigin="anonymous"></script>
-    <script src="./js/favoritos.js"></script>
-    <script src="./js/homepage.js"></script>
+      </article>
+    </section>
+
+
+
+  </main>
+
+
+  <footer>
+
+    <img src="./img/logo2-removebg-preview.png" alt="logoDragon" id="logoDragonFooter">
+
+    <div id="contenedorLinksFooter">
+
+      <div class="c1">
+        <ul id="linksFooter">
+          <li><a href="">Home</a></li>
+          <li><a href="">Destacados</a></li>
+          <li><a href="">Contacto</a></li>
+          <li><a href="">Ayuda</a></li>
+        </ul>
+      </div>
+      <div class="c2">
+        <ul id="redesFooter">
+          <li><a href="https://www.tiktok.com/es/" target="_blank"><i
+                class="fa-brands fs-1 fa-tiktok mx-2 mx-lg-3 mx-md-2" id="tiktok"></i></a></li>
+          <li><a href="https://www.instagram.com/" target="_blank"><i
+                class="fa-brands fs-1 fa-instagram mx-2 mx-lg-3 mx-md-2" id="instagram"></i></a></li>
+          <li><a href="https://www.youtube.com/" target="_blank"><i
+                class="fa-brands fs-1 fa-youtube mx-2 mx-lg-3 mx-md-2" id="youtube"></i></a></li>
+          <li><a href="https://twitter.com/?lang=es" target="_blank"><i
+                class="fa-brands fs-1 fa-square-x-twitter mx-2 mx-lg-3 mx-md-2" id="twitter"></i></a></li>
+        </ul>
+      </div>
+      <div class="c3">Data Fiscal <img src="./img/codigo_qr.png" alt="dataFiscalQR" id="dataFiscalQR"></div>
+      <div class="c4">©2024 Wyvern Components. Todos los derechos reservados.</div>
+
+
+
+    </div>
+
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/ebd81ac4a4.js" crossorigin="anonymous"></script>
+  <script src="./js/favoritos.js"></script>
+  <script src="./js/homepage.js"></script>
 </body>
+
 </html>
