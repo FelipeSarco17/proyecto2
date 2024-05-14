@@ -27,7 +27,7 @@ nav {
     position: sticky;
     align-items: center;
     background-color: var(--primario);
-    width: 100vw;
+    width: 100%;
     height: 100px;
 }
 
@@ -220,18 +220,23 @@ nav {
 
 /* MAIN */
 
-main {
+main{
+    width: 100%;
     margin-bottom: 150px;
     display: flex;
     margin-top: 150px;
     gap: 0px 30px;
 }
 
+
 .publicidad {
-    width: 200px;
+    width: 300px;
     margin-left: 10px;
 }
 
+#contenedorPublicidad{
+    width: 450px;
+}
 
 #seccionAcordeonPublicidad {
     margin-left: 10px;
@@ -272,7 +277,7 @@ main {
 /* SLIDER PRODUCTOS DESTACADOS */
 
 .contenedorSliders{
-    width: 1435px;
+    width: 920px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -283,7 +288,7 @@ main {
 
 #seccionProductos {
     scroll-behavior: smooth;
-    max-width: 1435px;
+    max-width: 920px;
     overflow-x: auto;
     display: flex;
     
@@ -296,7 +301,7 @@ main {
 
 #seccionNuevos {
     scroll-behavior: smooth;
-    max-width: 1435px;
+    max-width: 920px;
     overflow-x: auto;
     display: flex;
     

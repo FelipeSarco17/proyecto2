@@ -333,18 +333,18 @@ let seccionNuevos = document.querySelector("#seccionNuevos");
 
 
 let right_moverDestacados = ()=>{
-    seccionProductos.scrollLeft += 1435;
+    seccionProductos.scrollLeft += 920;
 }
 
 let left_moverDestacados = ()=>{
-   seccionProductos.scrollLeft -= 1435;
+   seccionProductos.scrollLeft -= 920;
 }
 
 let right_moverNuevos = ()=>{
-    seccionNuevos.scrollLeft += 1435;
+    seccionNuevos.scrollLeft += 920;
 }
 
 let left_moverNuevos = ()=>{
-   seccionNuevos.scrollLeft -= 1435;
+   seccionNuevos.scrollLeft -= 920;
 }
 
