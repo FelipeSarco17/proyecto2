@@ -1,14 +1,13 @@
 let categoriaBuscada = leerCategoriaBuscada();
 let seccionProductosCategoria = document.querySelector("#productosCategoria");
 let productosPaginaCategoria = leerProductos(); 
-console.log(categoriaBuscada);
-console.log(productosPaginaCategoria);
+
 window.onload = ()=>{
 
     productosPaginaCategoria.forEach((producto)=>{
-        console.log("hola");
+        
         if(producto.categoria == categoriaBuscada){
-            console.log("hola");
+            
             seccionProductosCategoria.innerHTML +=`
 
             <article class="tarjetaProductoCategoria" id="producto${producto.id}">
@@ -70,3 +69,4 @@ function leerCategoriaBuscada(){
     }
 
 }
+

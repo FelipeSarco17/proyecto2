@@ -141,9 +141,13 @@
       <div id="headerColumn2">
 
         <h1>¡Bienvenido a Wyvern!</h1>
-        <div id="contenedorBusqueda">
-          <input id="barraBusqueda" type="search" placeholder="Buscar...">
-          <button id="botonBusqueda" class="botones">Buscar</button>
+        <div class="contenedorBusqueda ">
+
+          <input type="search" placeholder="Buscar...">
+          <a href=""><img class="icon" src="./img/searchLogo.svg" alt="searchLogo"></a>
+          <ul class="sugerencias">
+          
+          </ul>
         </div>
       </div>
 
@@ -178,7 +182,8 @@
             <div id="panelProcesadores" class="accordion-collapse collapse" data-bs-parent="#accordionCategorias">
               <div class="accordion-body">
                 <ul class="listasCategorias">
-                  <li onclick="cargarCategoria('Procesadores Intel')"><a href="./productos.html">Procesadores Intel</a></li>
+                  <li onclick="cargarCategoria('Procesadores Intel')"><a href="./productos.html">Procesadores Intel</a>
+                  </li>
                   <li onclick="cargarCategoria('Procesadores AMD')"><a href="./productos.html">Procesadores AMD</a></li>
                 </ul>
               </div>
@@ -212,8 +217,10 @@
             <div id="panelPlacas" class="accordion-collapse collapse" data-bs-parent="#accordionCategorias">
               <div class="accordion-body">
                 <ul class="listasCategorias">
-                  <li onclick="cargarCategoria('Placas de Video GeForce')"><a href="./productos.html">Placa de Video GeForce</a></li>
-                  <li onclick="cargarCategoria('Placas de Video Radeon AMD')"><a href="./productos.html">Placa de Video Radeon AMD </a></li>
+                  <li onclick="cargarCategoria('Placas de Video GeForce')"><a href="./productos.html">Placa de Video
+                      GeForce</a></li>
+                  <li onclick="cargarCategoria('Placas de Video Radeon AMD')"><a href="./productos.html">Placa de Video
+                      Radeon AMD </a></li>
                 </ul>
               </div>
             </div>
@@ -230,7 +237,8 @@
               <div class="accordion-body">
                 <ul class="listasCategorias">
                   <li onclick="cargarCategoria('Memorias')"><a href="./productos.html">Memorias</a></li>
-                  <li onclick="cargarCategoria('Memorias Notebook')"><a href="./productos.html">Memorias Notebook</a></li>
+                  <li onclick="cargarCategoria('Memorias Notebook')"><a href="./productos.html">Memorias Notebook</a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -248,7 +256,8 @@
                 <ul class="listasCategorias">
                   <li onclick="cargarCategoria('Discos Externos')"><a href="./productos.html">Discos Externos</a></li>
                   <li onclick="cargarCategoria('Discos Rigidos')"><a href="./productos.html">Discos Rigidos</a></li>
-                  <li onclick="cargarCategoria('Discos Solidos SSD')"><a href="./productos.html">Discos Solidos SSD</a></li>
+                  <li onclick="cargarCategoria('Discos Solidos SSD')"><a href="./productos.html">Discos Solidos SSD</a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -319,7 +328,8 @@
             <div id="panelMonitores" class="accordion-collapse collapse" data-bs-parent="#accordionCategorias">
               <div class="accordion-body">
                 <ul class="listasCategorias">
-                  <li onclick="cargarCategoria('Monitores y pantallas')"><a href="./productos.html">Monitores y pantallas</a></li>
+                  <li onclick="cargarCategoria('Monitores y pantallas')"><a href="./productos.html">Monitores y
+                      pantallas</a></li>
                 </ul>
               </div>
             </div>
@@ -351,7 +361,7 @@
     <!-- PRODUCTOS  -->
 
     <div class="contenedorSliders">
-     
+
       <div id="sliderDestacados">
         <div class="headerSlider">
           <h2 class="text-white">Productos Destacados</h2>
@@ -360,12 +370,12 @@
             <span class="botonSlider" onclick="right_moverDestacados()">&#155;</span>
           </p>
         </div>
-  
+
         <section id="seccionProductos">
-         
+
         </section>
       </div>
-      
+
       <div id="sliderNuevos">
         <div class="headerSlider">
           <h2 class="text-white">Productos Nuevos</h2>
@@ -374,12 +384,12 @@
             <span class="botonSlider" onclick="right_moverNuevos()">&#155;</span>
           </p>
         </div>
-  
+
         <section id="seccionNuevos">
-        
+
         </section>
       </div>
-   
+
     </div>
 
     <section>

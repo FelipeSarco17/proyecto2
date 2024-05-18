@@ -4,23 +4,24 @@ let carritoHomePage = [];
 let productoElegido;
 
 fetch("./js/productos.json")
-.then(response => response.json())
-.then((data)=>{
-    
+    .then(response => response.json())
+    .then((data) => {
+
         productosHomePage = data;
-     
+
         let seccionProductos = document.querySelector("#seccionProductos");
         let seccionNuevos = document.querySelector("#seccionNuevos");
         cargarProductos();
-        productosHomePage.forEach((producto)=>{
-            
-        if(producto.destacado){
-            seccionProductos.innerHTML += `
+        productosHomePage.forEach((producto) => {
+
+            if (producto.destacado) {
+                seccionProductos.innerHTML += `
 
             <article class="tarjeta" id="producto${producto.id}">
                 <div class="tarjeta-img-top">
+                    <a href="${producto.link}" onclick="subirProductoElegido(${producto.id})">
                     <img src="${producto.imagen}" alt="" >
- 
+                    </a>
                 </div>
           
                 <div class="card-body">
@@ -45,13 +46,13 @@ fetch("./js/productos.json")
             </article>
         
             `;
-        }
-        
-        if(producto.nuevo){
+            }
 
-            
+            if (producto.nuevo) {
 
-            seccionNuevos.innerHTML += `
+
+
+                seccionNuevos.innerHTML += `
 
             <article class="tarjeta" id="producto${producto.id}">
                 <div class="tarjeta-img-top">
@@ -81,113 +82,114 @@ fetch("./js/productos.json")
             </article>
         
             `;
-        }
-        
-        
-    });
-   
+            }
 
-})
-.catch((error) => console.error("No se pudo conseguir la data:", error));
 
-window.onload = ()=>{
-    
-        let usuarioLogin = leerUsuarioLogueado();
+        });
 
-        if(usuarioLogin){
+
+    })
+    .catch((error) => console.error("No se pudo conseguir la data:", error));
+
+window.onload = () => {
+
+    let usuarioLogin = leerUsuarioLogueado();
+
+    if (usuarioLogin) {
 
         let perfil = document.querySelector("#botonLogIn");
         perfil.innerHTML = `<img src="./img/user.svg" alt="LogoUser">${usuarioLogin.nombre}`;
 
-        }
-        
-        leerCarrito();
-         
-        let contadoresCarrito = document.querySelectorAll("#contadorCarrito");
-        contadoresCarrito.forEach((contadorCarrito)=>{
-            contadorCarrito.innerText = `${carritoHomePage.length}`;
-        });
-    
+    }
 
-    
-        
-        leerFavoritos();
-        let contadoresFavoritos = document.querySelectorAll("#contadorFavs");
-        contadoresFavoritos.forEach((contadorFavoritos)=>{
+    leerCarrito();
+
+    let contadoresCarrito = document.querySelectorAll("#contadorCarrito");
+    contadoresCarrito.forEach((contadorCarrito) => {
+        contadorCarrito.innerText = `${carritoHomePage.length}`;
+    });
+
+
+
+
+    leerFavoritos();
+    let contadoresFavoritos = document.querySelectorAll("#contadorFavs");
+    contadoresFavoritos.forEach((contadorFavoritos) => {
         contadorFavoritos.innerText = `${favoritosHomePage.length}`;
-        });
+    });
 
-        
-    
+
+
 };
 
 
 
 
-let usuarios = [{email:"felipe@gmail.com",
-                 password:"1234",
-                 nombre: "Felipe",
-                 apellido:"sarco",
-                 telefono:"38123123",
-                 domicilio: "bascary 4365"
-                }
-                ,{
-                    email:"gustavo@gmail.com",
-                    password:"4324",
-                    nombre: "Gustavo",
-                    apellido:"sarco",
-                    telefono:"38123123",
-                    domicilio: "bascary 4365"
-                }
+let usuarios = [{
+    email: "felipe@gmail.com",
+    password: "1234",
+    nombre: "Felipe",
+    apellido: "sarco",
+    telefono: "38123123",
+    domicilio: "bascary 4365"
+}
+    , {
+    email: "gustavo@gmail.com",
+    password: "4324",
+    nombre: "Gustavo",
+    apellido: "sarco",
+    telefono: "38123123",
+    domicilio: "bascary 4365"
+}
 ];
 
 
 
 // LOCAL STORAGE
 
-function leerCarrito(){
+function leerCarrito() {
     let carritoLocalStorage = JSON.parse(localStorage.getItem("carrito"));
-    if(carritoLocalStorage){
-        
+    if (carritoLocalStorage) {
+
         carritoHomePage = carritoLocalStorage;
     }
-    
+
 }
 
-function leerUsuarioLogueado(){
+function leerUsuarioLogueado() {
     let usuarioLogueado = JSON.parse(localStorage.getItem("usuarioLogueado"));
-    if(usuarioLogueado){
+    if (usuarioLogueado) {
         return usuarioLogueado;
     }
 }
 
-function leerFavoritos(){
-    
-    let favoritosLocalStorage = JSON.parse(localStorage.getItem("favoritos")); 
-    if(favoritosLocalStorage){
+function leerFavoritos() {
+
+    let favoritosLocalStorage = JSON.parse(localStorage.getItem("favoritos"));
+    if (favoritosLocalStorage) {
         favoritosHomePage = favoritosLocalStorage;
     }
-    
+
 }
 
-function cargarFavoritos(data){
-    localStorage.setItem("favoritos",JSON.stringify(data));
+function cargarFavoritos(data) {
+    localStorage.setItem("favoritos", JSON.stringify(data));
 }
 
-function cargarProductos(){
-    localStorage.setItem("productos",JSON.stringify(productosHomePage));
+function cargarProductos() {
+    localStorage.setItem("productos", JSON.stringify(productosHomePage));
 }
 
-function cargarCarrito(data){
-    localStorage.setItem("carrito",JSON.stringify(data));
+function cargarCarrito(data) {
+    localStorage.setItem("carrito", JSON.stringify(data));
 }
 
-function cargarUsuario(data){
-    localStorage.setItem("usuarioLogueado",JSON.stringify(data));
+function cargarUsuario(data) {
+    localStorage.setItem("usuarioLogueado", JSON.stringify(data));
 }
 
-function cargarProductoElegido(data){
-    localStorage.setItem("productoElegido",JSON.stringify(data))
+function cargarProductoElegido(data) {
+    localStorage.setItem("productoElegido", JSON.stringify(data))
 }
 
 // ****************************
@@ -196,26 +198,25 @@ function cargarProductoElegido(data){
 // BOTON LOGIN
 
 const botonLogin = document.querySelector("#botonModalLogin");
-botonLogin.setAttribute("data-bs-dismiss"," ");
-botonLogin.addEventListener("click",(e)=>{
+botonLogin.setAttribute("data-bs-dismiss", " ");
+botonLogin.addEventListener("click", (e) => {
 
     const email = document.querySelector("#inputEmail").value;
     const password = document.querySelector("#inputPass").value;
     let login = false;
-    
- 
-    for(let i=0;i<usuarios.length;i++){
 
-        if(usuarios[i].email==email && usuarios[i].password==password){
+
+    for (let i = 0; i < usuarios.length; i++) {
+
+        if (usuarios[i].email == email && usuarios[i].password == password) {
             let perfil = document.querySelector("#botonLogIn");
-            botonLogin.setAttribute("data-bs-dismiss","modal");
+            botonLogin.setAttribute("data-bs-dismiss", "modal");
             cargarUsuario(usuarios[i]);
             perfil.innerHTML = `<img src="./img/user.svg" alt="LogoUser">${usuarios[i].nombre}`;
-            login=true;
-            
-         }
-        else
-        {
+            login = true;
+
+        }
+        else {
 
             let modalBodyLogin = document.querySelector("#modalBodyLogin");
             modalBodyLogin.innerHTML = `
@@ -229,10 +230,10 @@ botonLogin.addEventListener("click",(e)=>{
             <p style="color:red; text-align:center; margin-top:5px;">La contraseña o el correo ingresados son incorrectos</p>
             <p id="linksModal"><a href="" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">¿No tienes una cuenta?</a> <a href="">¿Olvidaste tu contraseña?</a></p>
             `;
-        
-         }
 
-         if(login) break;
+        }
+
+        if (login) break;
 
     }
 
@@ -245,24 +246,24 @@ botonLogin.addEventListener("click",(e)=>{
 // BOTON REGISTRARSE
 const botonRegistro = document.querySelector("#botonRegistrarse");
 const inputsRegistro = document.querySelectorAll(".inputRegistro");
-botonRegistro.setAttribute("data-bs-dismiss"," ");
+botonRegistro.setAttribute("data-bs-dismiss", " ");
 
 
-botonRegistro.addEventListener("click",()=>{
-    
-  
-    inputsRegistro.forEach((input)=>{
-        if(!input.value){
+botonRegistro.addEventListener("click", () => {
+
+
+    inputsRegistro.forEach((input) => {
+        if (!input.value) {
             return
-         }
-        
+        }
+
     });
 
     usuarios.push(usuarioNuevo);
     let perfil = document.querySelector("#botonLogIn");
 
     perfil.innerHTML = `<img src="./img/user.svg" alt="LogoUser">${usuarioNuevo.nombre}`;
-    botonRegistro.setAttribute("data-bs-dismiss","modal");
+    botonRegistro.setAttribute("data-bs-dismiss", "modal");
 });
 
 // ****************************
@@ -270,32 +271,32 @@ botonRegistro.addEventListener("click",()=>{
 
 // BOTON CARRITO
 
-function añadirProductoAlCarrito(idProducto){
+function añadirProductoAlCarrito(idProducto) {
 
     console.log(2);
     let productoCarrito;
-    productosHomePage.forEach((producto)=>{
+    productosHomePage.forEach((producto) => {
 
-        if(idProducto == producto.id && producto.enCarrito == false){
-            
+        if (idProducto == producto.id && producto.enCarrito == false) {
+
             productoCarrito = producto;
         }
-        else{
+        else {
             return;
         }
     });
-    
+
 
     productoCarrito.enCarrito = true;
     productoCarrito.cantidadEnCarrito = 1;
     carritoHomePage.push(productoCarrito);
     cargarCarrito(carritoHomePage);
     let contadoresCarrito = document.querySelectorAll("#contadorCarrito");
-   
-    contadoresCarrito.forEach((contadorCarrito)=>{
+
+    contadoresCarrito.forEach((contadorCarrito) => {
         contadorCarrito.innerText = `${carritoHomePage.length}`;
     });
-    
+
 
 }
 
@@ -303,16 +304,16 @@ function añadirProductoAlCarrito(idProducto){
 
 // BOTON FAVORITOS
 
-function añadirProductoFavoritos(idProducto){
+function añadirProductoFavoritos(idProducto) {
 
     let productoFavorito;
-    productosHomePage.forEach((producto)=>{
+    productosHomePage.forEach((producto) => {
 
-        if(idProducto == producto.id && producto.enFavoritos == false){
-            
+        if (idProducto == producto.id && producto.enFavoritos == false) {
+
             productoFavorito = producto;
         }
-        else{
+        else {
             return;
         }
     });
@@ -321,7 +322,7 @@ function añadirProductoFavoritos(idProducto){
     favoritosHomePage.push(productoFavorito);
     cargarFavoritos(favoritosHomePage);
     let contadoresFavoritos = document.querySelectorAll("#contadorFavs");
-    contadoresFavoritos.forEach((contadorFavoritos)=>{
+    contadoresFavoritos.forEach((contadorFavoritos) => {
         contadorFavoritos.innerText = `${favoritosHomePage.length}`;
     });
 
@@ -337,37 +338,134 @@ let seccionProductos = document.querySelector("#seccionProductos");
 let seccionNuevos = document.querySelector("#seccionNuevos");
 
 
-let right_moverDestacados = ()=>{
+let right_moverDestacados = () => {
     seccionProductos.scrollLeft += 920;
 }
 
-let left_moverDestacados = ()=>{
-   seccionProductos.scrollLeft -= 920;
+let left_moverDestacados = () => {
+    seccionProductos.scrollLeft -= 920;
 }
 
-let right_moverNuevos = ()=>{
+let right_moverNuevos = () => {
     seccionNuevos.scrollLeft += 920;
 }
 
-let left_moverNuevos = ()=>{
-   seccionNuevos.scrollLeft -= 920;
+let left_moverNuevos = () => {
+    seccionNuevos.scrollLeft -= 920;
 }
 
 
 //ACORDEON CATEGORIAS
 
 
-function cargarCategoria(data){
-    localStorage.setItem("categoriaBuscada",JSON.stringify(data));
+function cargarCategoria(data) {
+    console.log(data);
+    localStorage.setItem("categoriaBuscada", JSON.stringify(data));
 }
 
 
 //CARGAR PRODUCTO ELEGIDO
 
-function subirProductoElegido(idProducto){
-    productosHomePage.forEach((producto)=>{
-        if(producto.id==idProducto){
+function subirProductoElegido(idProducto) {
+    productosHomePage.forEach((producto) => {
+        if (producto.id == idProducto) {
             cargarProductoElegido(producto);
         }
     });
+}
+
+
+//BUSCADOR
+
+let sugerencias = [
+    "Placas de Video Radeon AMD",
+    "Placas de Video GeForce",
+    "Fuentes",
+    "Procesadores Intel",
+    "Procesadores AMD",
+    "Mothers AMD",
+    "Mothers Intel",
+    "Monitores y pantallas",
+    "Sillas Gamers",
+    "Auriculares",
+    "Teclados",
+    "Mouses",
+    "Mouse Pads",
+    "Microfonos",
+    "Webcam",
+    "Joystick",
+    "Parlantes",
+    "Memorias",
+    "Memorias Notebook",
+    "Discos Rigidos",
+    "Discos Externos",
+    "Discos Solidos SSD",
+    "Gabinetes"
+];
+
+let contenedorBusqueda = document.querySelector(".contenedorBusqueda");
+let inputSearch = contenedorBusqueda.querySelector("input");
+let botonBusqueda = contenedorBusqueda.querySelector("a");
+let contenedorSugerencias = contenedorBusqueda.querySelector(".sugerencias");
+
+inputSearch.onkeyup = e => {
+
+    let busqueda = e.target.value
+    let emptyArray = [];
+
+    if (busqueda) {
+
+        emptyArray = sugerencias.filter(data => {
+            return data.toLocaleLowerCase().startsWith(busqueda.toLocaleLowerCase());
+        });
+
+        emptyArray = emptyArray.map(data => {
+            return data = `<li>${data}</li>`;
+        });
+
+        contenedorBusqueda.classList.add("active");
+        mostrarSugerencias(emptyArray);
+
+        let listaSugerencias = contenedorBusqueda.querySelectorAll("li");
+
+        listaSugerencias.forEach(li=>{
+            li.setAttribute("onclick","select(this)");
+        });
+
+
+    } else {
+        contenedorBusqueda.classList.remove("active");
+    }
+
+
+
+
+
+};
+
+function select(elemento) {
+
+    let selectUserData = elemento.textContent;
+    console.log(selectUserData);
+    inputSearch.value = selectUserData;
+    botonBusqueda.href = "./productos.html";
+    botonBusqueda.setAttribute("onclick",`cargarCategoria('${selectUserData}')`);
+    contenedorBusqueda.classList.remove("active");
+}
+
+
+function mostrarSugerencias(list) {
+    let listData;
+
+    if (!list.length) {
+        userValue = inputSearch.value;
+        listData = `<li>${userValue}</li>`
+    }
+    else {
+        listData = list.join(" ");
+    }
+
+    contenedorSugerencias.innerHTML = listData;
+
+
 }

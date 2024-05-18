@@ -106,10 +106,10 @@ nav {
 #contenedorLogo {
     display: grid;
     grid-template-rows: 400px;
-    grid-template-columns: 400px 450px;
+    grid-template-columns: 400px 700px;
     column-gap: 5px;
     flex-direction: row;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     position: relative;
 }
@@ -123,19 +123,94 @@ nav {
     color: var(--primario);
 }
 
-#barraBusqueda {
-    width: 250px;
-    padding: 12px;
-    border-radius: 50px;
+/* BUSCADOR */
+
+#headerColumn2 h1 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+#headerColumn2{
+    margin-top: 50px;
+}
+
+.contenedorBusqueda{
+    width: 470px;
+    background-color: var(--primario);
+    position: relative;
+    border-radius: 20px;
     border: 2px solid var(--secundario);
 }
 
-#botonBusqueda {
-    position: absolute;
-    right: 630px;
-    top: 212.5px;
-    padding: 10px;
+.contenedorBusqueda input{
+    width: 400px;
+    padding: 12px;
+    border-radius: 18px 0px 0px 18px;
+    border: 0px;
+    outline: none;
 }
+
+.icon{
+    width: 30px;
+    margin-left: 14px;
+    margin-bottom: 3px;
+}
+
+
+.sugerencias{
+    margin: 0px;
+    padding: 0px;
+    background-color: white;
+    color: black;
+    max-height: 238px;
+    border-radius: 0px 0px 20px 20px;
+    pointer-events: none;
+    overflow-y: auto; 
+}
+
+.sugerencias li{
+    list-style: none;
+    display: none;   
+}
+
+.active{
+    border-radius: 20px;
+}
+
+.contenedorBusqueda.active .sugerencias{
+    
+    pointer-events: auto;
+    border-radius: 0px 0px 18px 18px;
+}
+
+.contenedorBusqueda.active .sugerencias::-webkit-scrollbar{
+    width: 5px;
+}
+
+.contenedorBusqueda.active .sugerencias::-webkit-scrollbar-thumb{
+    background-color: gray;
+    border-radius: 18px;
+    margin: 10px;
+}
+
+.contenedorBusqueda.active .sugerencias::-webkit-scrollbar-track{
+    
+    margin-bottom: 10px;
+    margin-right: 5px;
+    border-radius: 20px;
+}
+
+.contenedorBusqueda.active .sugerencias li{
+    display: block;
+    padding: 10px 8px;
+
+}
+
+.contenedorBusqueda.active input{
+    border-radius: 18px 0px 0px 0px;
+}
+
+/* *************************** */
 
 .botones {
     color: white;
@@ -198,10 +273,6 @@ nav {
 
 }
 
-#headerColumn2 h1 {
-    color: white;
-    margin-bottom: 30px;
-}
 
 #collapseIcon {
 
@@ -570,9 +641,13 @@ a {
     }
 
 
-    #contenedorBusqueda {
+    .contenedorBusqueda {
         display: flex;
+        
+    }
 
+    .sugerencias{
+        color: white;
     }
 
     #barraBusqueda {
@@ -588,7 +663,8 @@ a {
         font-size: 15px;
         padding: 0px;
         height: 40px;
-
+        text-decoration: none;
+        
     }
 
 
