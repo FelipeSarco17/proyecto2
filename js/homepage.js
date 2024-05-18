@@ -11,8 +11,11 @@ fetch("./js/productos.json")
 
         let seccionProductos = document.querySelector("#seccionProductos");
         let seccionNuevos = document.querySelector("#seccionNuevos");
+        
         cargarProductos();
-        productosHomePage.forEach((producto) => {
+        productosHomePage.forEach((producto,index) => {
+           
+           
 
             if (producto.destacado) {
                 seccionProductos.innerHTML += `
@@ -35,11 +38,12 @@ fetch("./js/productos.json")
                         </p>
                         <div class="contenedorBotonesCards">
                         <button href="" id="botonFavoritoAñadir${producto.id}" class="botonFavoritos"
-                         onclick="añadirProductoFavoritos(${producto.id})"><img src="./img/heartBlack.svg" alt="LogoFavoritos"
-                        class="logoFavCards"></button>
+                         onclick="funcionesFavorito(${producto.id},this)"><img src="./img/heartBlack.svg" alt="LogoFavoritos"
+                        class="logoFavCards" id="corazonVacio"><img src="./img/heartFill.svg" alt="logoFavoritosCheck"></button>
+                        
                         <button href="" id="botonCarritoAñadir${producto.id}" class="botonCarritoAñadir"
-                        onclick="añadirProductoAlCarrito(${producto.id})"><img src="./img/addCart.svg"
-                        alt="CarritoAñadir"></button>
+                        onclick="funcionesCarrito(${producto.id},botonCarritoAñadir${producto.id})"><img src="./img/addCart.svg"
+                        alt="CarritoAñadir" id="carritoAñadir" class=" " ><img src="./img/cartCheck.svg" alt="cartCheckLogo"></button>
                         </div>
                     </div>
                 </div>
@@ -71,11 +75,12 @@ fetch("./js/productos.json")
                         </p>
                         <div class="contenedorBotonesCards">
                         <button  id="botonFavoritoAñadir${producto.id}" class="botonFavoritos"
-                         onclick="añadirProductoFavoritos(${producto.id})"><img src="./img/heartBlack.svg" alt="LogoFavoritos"
-                        class="logoFavCards"></button>
+                         onclick="funcionesFavorito(${producto.id},botonFavoritoAñadir${producto.id})"><img src="./img/heartBlack.svg" alt="LogoFavoritos"
+                        class="logoFavCards" id="corazonVacio"><img src="./img/heartFill.svg" alt="logoFavoritosCheck" class="logoFavFill" id="corazonLleno"></button>
+                        
                         <button  id="botonCarritoAñadir${producto.id}" class="botonCarritoAñadir"
-                        onclick="añadirProductoAlCarrito(${producto.id})"><img src="./img/addCart.svg"
-                        alt="CarritoAñadir"></button>
+                        onclick="funcionesCarrito(${producto.id},botonCarritoAñadir${producto.id})"><img src="./img/addCart.svg"
+                        alt="CarritoAñadir" id="carritoAñadir" class=" "><img src="./img/cartCheck.svg" alt="cartCheckLogo"></button>
                         </div>
                     </div>
                 </div>
@@ -87,6 +92,9 @@ fetch("./js/productos.json")
 
         });
 
+        
+
+        
 
     })
     .catch((error) => console.error("No se pudo conseguir la data:", error));
@@ -94,6 +102,10 @@ fetch("./js/productos.json")
 window.onload = () => {
 
     let usuarioLogin = leerUsuarioLogueado();
+    let favoritosHomePage= leerFavoritos();
+    let botonesFav = document.querySelectorAll("#corazonVacio");
+    let carritoHomePage= leerCarrito();
+    let botonesCarrito = document.querySelectorAll("#carritoAñadir");
 
     if (usuarioLogin) {
 
@@ -102,23 +114,30 @@ window.onload = () => {
 
     }
 
-    leerCarrito();
+    
 
     let contadoresCarrito = document.querySelectorAll("#contadorCarrito");
     contadoresCarrito.forEach((contadorCarrito) => {
         contadorCarrito.innerText = `${carritoHomePage.length}`;
     });
 
+    
 
+    
+    
 
-
-    leerFavoritos();
     let contadoresFavoritos = document.querySelectorAll("#contadorFavs");
     contadoresFavoritos.forEach((contadorFavoritos) => {
         contadorFavoritos.innerText = `${favoritosHomePage.length}`;
     });
 
+    favoritosHomePage.forEach((producto)=>{
+        botonesFav[producto.id-1].classList.add("logoFavCardActive");
+    });
 
+    carritoHomePage.forEach((producto)=>{
+        botonesCarrito[producto.id-1].classList.add("logoCartCardActive");
+    });
 
 };
 
@@ -151,7 +170,7 @@ function leerCarrito() {
     let carritoLocalStorage = JSON.parse(localStorage.getItem("carrito"));
     if (carritoLocalStorage) {
 
-        carritoHomePage = carritoLocalStorage;
+        return carritoLocalStorage;
     }
 
 }
@@ -167,7 +186,7 @@ function leerFavoritos() {
 
     let favoritosLocalStorage = JSON.parse(localStorage.getItem("favoritos"));
     if (favoritosLocalStorage) {
-        favoritosHomePage = favoritosLocalStorage;
+        return favoritosLocalStorage;
     }
 
 }
@@ -271,6 +290,12 @@ botonRegistro.addEventListener("click", () => {
 
 // BOTON CARRITO
 
+function funcionesCarrito(idProducto,elemento){
+    añadirProductoAlCarrito(idProducto);
+     carritoCheck(elemento);
+ }
+
+
 function añadirProductoAlCarrito(idProducto) {
 
     console.log(2);
@@ -300,9 +325,19 @@ function añadirProductoAlCarrito(idProducto) {
 
 }
 
+function carritoCheck(elemento){
+    let carritoAñadir = elemento.querySelector("#carritoAñadir");
+    carritoAñadir.classList.add("logoCartCardActive");
+}
+
 // ****************************
 
 // BOTON FAVORITOS
+
+function funcionesFavorito(idProducto,elemento){
+   añadirProductoFavoritos(idProducto);
+    llenarCorazon(elemento);
+}
 
 function añadirProductoFavoritos(idProducto) {
 
@@ -326,6 +361,11 @@ function añadirProductoFavoritos(idProducto) {
         contadorFavoritos.innerText = `${favoritosHomePage.length}`;
     });
 
+}
+
+function llenarCorazon(elemento){
+    let corazonVacio = elemento.querySelector("#corazonVacio");
+    corazonVacio.classList.add("logoFavCardActive");
 }
 
 // ****************************

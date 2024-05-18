@@ -431,15 +431,22 @@ main{
     
 }
 
-.botonFavoritos,
-.botonCarritoAñadir {
+
+.botonFavoritos,.botonCarritoAñadir{
     border: 0px;
     padding: 0px;
     background-color: white;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
 }
 
-.logoFavCards {
-    width: 20px;
+.logoCartCardActive{
+    display: none;
+}
+
+.logoFavCardActive{
+    display: none;
 }
 
 .contenedorBotonesCards{

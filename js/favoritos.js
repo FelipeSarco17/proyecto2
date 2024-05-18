@@ -5,6 +5,7 @@ let listadoVacio = document.querySelector("#favoritosVacio");
 favoritos = leerFavoritos();
 console.log(favoritos);
 
+
 if(favoritos.length != 0){
     listadoVacio.style.display = "none";
     actualizarLista();
@@ -15,7 +16,6 @@ function eliminarProductoFavorito(idProducto){
     let productoEliminar;
     let indice;
     let contadorFavorito = document.querySelector("#contadorFavs");
-
     favoritos.forEach((productoFavorito,index)=>{
 
         if(productoFavorito.id==idProducto){
