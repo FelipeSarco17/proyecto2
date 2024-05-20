@@ -13,20 +13,25 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/estilos.css">
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
 
 <body>
 
   <header>
-    <nav>
 
-      <a href="./index.html"><img src="./img/logo2-removebg-preview.png" alt="logo" class="logoDragonNav"></a>
+    <nav class="inActive">
+
+      <button id="botonCollapse" class="abrir-menu"><img src="./img/collapseIcon.svg" alt="collapseIcon"></button>
+
+      <a href="./index.html" id="logoDragonNavLink"><img src="./img/logo2-removebg-preview.png" alt="logo" class="logoDragonNav"></a>
       <div id="navParteIzquierda">
         <a href="./index.html#sliderNuevos">Home</a>
         <a href="./index.html#sliderDestacados">Destacados</a>
         <a href="./contacto.html">Contacto</a>
       </div>
+
+
 
       <div id="navParteDerecha">
         <a href="./error404.html" class="contenedorFavCart" id="ayuda"><img src="./img/helpIcon.svg" alt="logoAyuda"
@@ -146,7 +151,7 @@
           <input type="search" placeholder="Buscar...">
           <a href=""><img class="icon" src="./img/searchLogo.svg" alt="searchLogo"></a>
           <ul class="sugerencias">
-          
+
           </ul>
         </div>
       </div>
@@ -364,7 +369,7 @@
 
       <div id="sliderDestacados">
         <div class="headerSlider">
-          <h2 class="text-white">Productos Destacados</h2>
+          <h2 class="text-white" >Productos Destacados</h2>
           <p>
             <span class="botonSlider" onclick="left_moverDestacados()">&#139;</span>
             <span class="botonSlider" onclick="right_moverDestacados()">&#155;</span>
@@ -420,7 +425,7 @@
 
   <footer>
 
-    <img src="./img/logo2-removebg-preview.png" alt="logoDragon" id="logoDragonFooter">
+    <a href="./index.html"><img src="./img/logo2-removebg-preview.png" alt="logoDragon" id="logoDragonFooter"></a>
 
     <div id="contenedorLinksFooter">
 

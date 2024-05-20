@@ -39,11 +39,11 @@ fetch("./js/productos.json")
                         <div class="contenedorBotonesCards">
                         <button href="" id="botonFavoritoAñadir${producto.id}" class="botonFavoritos"
                          onclick="funcionesFavorito(${producto.id},this)"><img src="./img/heartBlack.svg" alt="LogoFavoritos"
-                        class="logoFavCards" id="corazonVacio"><img src="./img/heartFill.svg" alt="logoFavoritosCheck"></button>
+                        class="logoFavCartCards" id="corazonVacio"><img class="logoFavCartCards" src="./img/heartFill.svg" alt="logoFavoritosCheck"></button>
                         
                         <button href="" id="botonCarritoAñadir${producto.id}" class="botonCarritoAñadir"
                         onclick="funcionesCarrito(${producto.id},botonCarritoAñadir${producto.id})"><img src="./img/addCart.svg"
-                        alt="CarritoAñadir" id="carritoAñadir" class=" " ><img src="./img/cartCheck.svg" alt="cartCheckLogo"></button>
+                        alt="CarritoAñadir" id="carritoAñadir" class="logoFavCartCards" ><img class="logoFavCartCards" src="./img/cartCheck.svg" alt="cartCheckLogo"></button>
                         </div>
                     </div>
                 </div>
@@ -509,3 +509,22 @@ function mostrarSugerencias(list) {
 
 
 }
+
+//BOTON COLLAPSE NAV
+
+let botonCollapse = document.querySelector("#botonCollapse");
+let navBar = document.querySelector("nav");
+console.log(navBar.classList);
+
+botonCollapse.addEventListener("click",()=>{
+
+    if(navBar.classList.contains("inActive")){
+        navBar.classList.remove("inActive");
+        navBar.classList.add("visible");
+    }
+    else{
+        navBar.classList.remove("visible");
+        navBar.classList.add("inActive");
+    }
+
+})
