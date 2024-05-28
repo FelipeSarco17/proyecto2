@@ -53,10 +53,6 @@ switch(productoMostrar.categoria){
         </div>
         
     </article>
-
-
-        
-        
         
         `;
 

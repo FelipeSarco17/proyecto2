@@ -14,3 +14,10 @@ botonEnviar.addEventListener("click",()=>{
 function cargarMensajeCliente(data){
     localStorage.setItem("mensajeCliente",JSON.stringify(data));
 }
+
+
+window.onload = () =>{
+
+    actualizarBotonLogin();
+
+}

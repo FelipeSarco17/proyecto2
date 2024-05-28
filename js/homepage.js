@@ -6,19 +6,34 @@ let productoElegido;
 fetch("./js/productos.json")
     .then(response => response.json())
     .then((data) => {
-
         productosHomePage = data;
-
-        let seccionProductos = document.querySelector("#seccionProductos");
-        let seccionNuevos = document.querySelector("#seccionNuevos");
+        if(JSON.parse(localStorage.getItem("productos")) == null){
+            cargarProductos(productosHomePage);
+        }
         
-        cargarProductos();
-        productosHomePage.forEach((producto,index) => {
-           
-           
+    })
+    .catch((error) => console.error("No se pudo conseguir la data:", error));
 
-            if (producto.destacado) {
-                seccionProductos.innerHTML += `
+
+
+window.onload = () => {
+
+    productosHomePage = leerProductos();
+    let favoritosHomePage = leerFavoritos();
+    let botonesFav = document.querySelectorAll("#corazonVacio");
+    let carritoHomePage = leerCarrito();
+    let botonesCarrito = document.querySelectorAll("#carritoAñadir");
+
+    let seccionProductos = document.querySelector("#seccionProductos");
+    let seccionNuevos = document.querySelector("#seccionNuevos");
+
+    cargarProductos(productosHomePage);
+    productosHomePage.forEach((producto, index) => {
+
+
+
+        if (producto.destacado) {
+            seccionProductos.innerHTML += `
 
             <article class="tarjeta" id="producto${producto.id}">
                 <div class="tarjeta-img-top">
@@ -50,18 +65,19 @@ fetch("./js/productos.json")
             </article>
         
             `;
-            }
+        }
 
-            if (producto.nuevo) {
+        if (producto.nuevo) {
 
 
 
-                seccionNuevos.innerHTML += `
+            seccionNuevos.innerHTML += `
 
             <article class="tarjeta" id="producto${producto.id}">
                 <div class="tarjeta-img-top">
-                    <img src="${producto.imagen}" alt="" >
- 
+                    <a href="${producto.link}" onclick="subirProductoElegido(${producto.id})">
+                        <img src="${producto.imagen}" alt="" >
+                    </a>
                 </div>
           
                 <div class="card-body">
@@ -87,56 +103,32 @@ fetch("./js/productos.json")
             </article>
         
             `;
-            }
+        }
 
 
-        });
+    });
 
-        
 
-        
 
-    })
-    .catch((error) => console.error("No se pudo conseguir la data:", error));
-
-window.onload = () => {
-
-    let usuarioLogin = leerUsuarioLogueado();
-    let favoritosHomePage= leerFavoritos();
-    let botonesFav = document.querySelectorAll("#corazonVacio");
-    let carritoHomePage= leerCarrito();
-    let botonesCarrito = document.querySelectorAll("#carritoAñadir");
-
-    if (usuarioLogin) {
-
-        let perfil = document.querySelector("#botonLogIn");
-        perfil.innerHTML = `<img src="./img/user.svg" alt="LogoUser">${usuarioLogin.nombre}`;
-
-    }
-
-    
+    actualizarBotonLogin();
 
     let contadoresCarrito = document.querySelectorAll("#contadorCarrito");
     contadoresCarrito.forEach((contadorCarrito) => {
         contadorCarrito.innerText = `${carritoHomePage.length}`;
     });
 
-    
-
-    
-    
 
     let contadoresFavoritos = document.querySelectorAll("#contadorFavs");
     contadoresFavoritos.forEach((contadorFavoritos) => {
         contadorFavoritos.innerText = `${favoritosHomePage.length}`;
     });
 
-    favoritosHomePage.forEach((producto)=>{
-        botonesFav[producto.id-1].classList.add("logoFavCardActive");
+    favoritosHomePage.forEach((producto) => {
+        botonesFav[producto.id - 1].classList.add("logoFavCardActive");
     });
 
-    carritoHomePage.forEach((producto)=>{
-        botonesCarrito[producto.id-1].classList.add("logoCartCardActive");
+    carritoHomePage.forEach((producto) => {
+        botonesCarrito[producto.id - 1].classList.add("logoCartCardActive");
     });
 
 };
@@ -150,7 +142,8 @@ let usuarios = [{
     nombre: "Felipe",
     apellido: "sarco",
     telefono: "38123123",
-    domicilio: "bascary 4365"
+    domicilio: "bascary 4365",
+    rango: "admin"
 }
     , {
     email: "gustavo@gmail.com",
@@ -158,142 +151,23 @@ let usuarios = [{
     nombre: "Gustavo",
     apellido: "sarco",
     telefono: "38123123",
-    domicilio: "bascary 4365"
-}
+    domicilio: "bascary 4365",
+    rango: "cliente"
+},
+
 ];
 
 
 
 // LOCAL STORAGE
 
-function leerCarrito() {
-    let carritoLocalStorage = JSON.parse(localStorage.getItem("carrito"));
-    if (carritoLocalStorage) {
-
-        return carritoLocalStorage;
-    }
-
-}
-
-function leerUsuarioLogueado() {
-    let usuarioLogueado = JSON.parse(localStorage.getItem("usuarioLogueado"));
-    if (usuarioLogueado) {
-        return usuarioLogueado;
-    }
-}
-
-function leerFavoritos() {
-
-    let favoritosLocalStorage = JSON.parse(localStorage.getItem("favoritos"));
-    if (favoritosLocalStorage) {
-        return favoritosLocalStorage;
-    }
-
-}
-
-function cargarFavoritos(data) {
-    localStorage.setItem("favoritos", JSON.stringify(data));
-}
-
-function cargarProductos() {
-    localStorage.setItem("productos", JSON.stringify(productosHomePage));
-}
-
-function cargarCarrito(data) {
-    localStorage.setItem("carrito", JSON.stringify(data));
-}
-
-function cargarUsuario(data) {
-    localStorage.setItem("usuarioLogueado", JSON.stringify(data));
-}
-
-function cargarProductoElegido(data) {
-    localStorage.setItem("productoElegido", JSON.stringify(data))
-}
-
-// ****************************
-
-
-// BOTON LOGIN
-
-const botonLogin = document.querySelector("#botonModalLogin");
-botonLogin.setAttribute("data-bs-dismiss", " ");
-botonLogin.addEventListener("click", (e) => {
-
-    const email = document.querySelector("#inputEmail").value;
-    const password = document.querySelector("#inputPass").value;
-    let login = false;
-
-
-    for (let i = 0; i < usuarios.length; i++) {
-
-        if (usuarios[i].email == email && usuarios[i].password == password) {
-            let perfil = document.querySelector("#botonLogIn");
-            botonLogin.setAttribute("data-bs-dismiss", "modal");
-            cargarUsuario(usuarios[i]);
-            perfil.innerHTML = `<img src="./img/user.svg" alt="LogoUser">${usuarios[i].nombre}`;
-            login = true;
-
-        }
-        else {
-
-            let modalBodyLogin = document.querySelector("#modalBodyLogin");
-            modalBodyLogin.innerHTML = `
-            <form action="" id="formLogin">
-
-            <label for="inputEmail"><img src="./img/user.svg" alt="logoUser">Email</label>
-            <input type="text" name="email" id="inputEmail" required>
-            <label for="inputPass"><img src="./img/logoPassword.svg" alt="logoPassword">Contraseña</label>
-            <input type="password" name="pass" id="inputPass" required>
-            </form>
-            <p style="color:red; text-align:center; margin-top:5px;">La contraseña o el correo ingresados son incorrectos</p>
-            <p id="linksModal"><a href="" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">¿No tienes una cuenta?</a> <a href="">¿Olvidaste tu contraseña?</a></p>
-            `;
-
-        }
-
-        if (login) break;
-
-    }
-
-
-
-});
-
-// ****************************
-
-// BOTON REGISTRARSE
-const botonRegistro = document.querySelector("#botonRegistrarse");
-const inputsRegistro = document.querySelectorAll(".inputRegistro");
-botonRegistro.setAttribute("data-bs-dismiss", " ");
-
-
-botonRegistro.addEventListener("click", () => {
-
-
-    inputsRegistro.forEach((input) => {
-        if (!input.value) {
-            return
-        }
-
-    });
-
-    usuarios.push(usuarioNuevo);
-    let perfil = document.querySelector("#botonLogIn");
-
-    perfil.innerHTML = `<img src="./img/user.svg" alt="LogoUser">${usuarioNuevo.nombre}`;
-    botonRegistro.setAttribute("data-bs-dismiss", "modal");
-});
-
-// ****************************
-
 
 // BOTON CARRITO
 
-function funcionesCarrito(idProducto,elemento){
+function funcionesCarrito(idProducto, elemento) {
     añadirProductoAlCarrito(idProducto);
-     carritoCheck(elemento);
- }
+    carritoCheck(elemento);
+}
 
 
 function añadirProductoAlCarrito(idProducto) {
@@ -325,7 +199,7 @@ function añadirProductoAlCarrito(idProducto) {
 
 }
 
-function carritoCheck(elemento){
+function carritoCheck(elemento) {
     let carritoAñadir = elemento.querySelector("#carritoAñadir");
     carritoAñadir.classList.add("logoCartCardActive");
 }
@@ -334,8 +208,8 @@ function carritoCheck(elemento){
 
 // BOTON FAVORITOS
 
-function funcionesFavorito(idProducto,elemento){
-   añadirProductoFavoritos(idProducto);
+function funcionesFavorito(idProducto, elemento) {
+    añadirProductoFavoritos(idProducto);
     llenarCorazon(elemento);
 }
 
@@ -363,7 +237,7 @@ function añadirProductoFavoritos(idProducto) {
 
 }
 
-function llenarCorazon(elemento){
+function llenarCorazon(elemento) {
     let corazonVacio = elemento.querySelector("#corazonVacio");
     corazonVacio.classList.add("logoFavCardActive");
 }
@@ -395,24 +269,6 @@ let left_moverNuevos = () => {
 }
 
 
-//ACORDEON CATEGORIAS
-
-
-function cargarCategoria(data) {
-    console.log(data);
-    localStorage.setItem("categoriaBuscada", JSON.stringify(data));
-}
-
-
-//CARGAR PRODUCTO ELEGIDO
-
-function subirProductoElegido(idProducto) {
-    productosHomePage.forEach((producto) => {
-        if (producto.id == idProducto) {
-            cargarProductoElegido(producto);
-        }
-    });
-}
 
 
 //BUSCADOR
@@ -468,8 +324,8 @@ inputSearch.onkeyup = e => {
 
         let listaSugerencias = contenedorBusqueda.querySelectorAll("li");
 
-        listaSugerencias.forEach(li=>{
-            li.setAttribute("onclick","select(this)");
+        listaSugerencias.forEach(li => {
+            li.setAttribute("onclick", "select(this)");
         });
 
 
@@ -489,7 +345,7 @@ function select(elemento) {
     console.log(selectUserData);
     inputSearch.value = selectUserData;
     botonBusqueda.href = "./productos.html";
-    botonBusqueda.setAttribute("onclick",`cargarCategoria('${selectUserData}')`);
+    botonBusqueda.setAttribute("onclick", `cargarCategoria('${selectUserData}')`);
     contenedorBusqueda.classList.remove("active");
 }
 
@@ -516,13 +372,13 @@ let botonCollapse = document.querySelector("#botonCollapse");
 let navBar = document.querySelector("nav");
 console.log(navBar.classList);
 
-botonCollapse.addEventListener("click",()=>{
+botonCollapse.addEventListener("click", () => {
 
-    if(navBar.classList.contains("inActive")){
+    if (navBar.classList.contains("inActive")) {
         navBar.classList.remove("inActive");
         navBar.classList.add("visible");
     }
-    else{
+    else {
         navBar.classList.remove("visible");
         navBar.classList.add("inActive");
     }
