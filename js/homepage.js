@@ -25,12 +25,15 @@ window.onload = () => {
     let botonesCarrito = document.querySelectorAll("#carritoAñadir");
 
     let seccionProductos = document.querySelector("#seccionProductos");
-    let seccionNuevos = document.querySelector("#seccionNuevos");
+    seccionProductos.innerHTML = ``;
 
-    cargarProductos(productosHomePage);
+    let seccionNuevos = document.querySelector("#seccionNuevos");
+    seccionNuevos.innerHTML = ``;
+
+    // cargarProductos(productosHomePage);
     productosHomePage.forEach((producto, index) => {
 
-
+        
 
         if (producto.destacado) {
             seccionProductos.innerHTML += `
@@ -109,9 +112,6 @@ window.onload = () => {
     });
 
 
-
-    actualizarBotonLogin();
-
     let contadoresCarrito = document.querySelectorAll("#contadorCarrito");
     contadoresCarrito.forEach((contadorCarrito) => {
         contadorCarrito.innerText = `${carritoHomePage.length}`;
@@ -172,7 +172,7 @@ function funcionesCarrito(idProducto, elemento) {
 
 function añadirProductoAlCarrito(idProducto) {
 
-    console.log(2);
+    
     let productoCarrito;
     productosHomePage.forEach((producto) => {
 

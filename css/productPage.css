@@ -58,11 +58,6 @@ main{
     color: var(--secundario);
 }
 
-#especificaciones{
-    display: flex;
-    flex-direction: row;
-}
-
 .logoTarjeta{
     width: 50px;
     margin-left: 20px;
@@ -74,29 +69,11 @@ main{
     padding-bottom: 20px;
 }
 
-#especificaciones h3{
-    border-bottom: 2px solid var(--secundario);
-    width: 370px;
+
+#descripcion{
+
+    
 }
-
-#detalleEspecificaciones{
-    list-style-type: none;
-}
-
-#detalleEspecificaciones li{
-    width: 300px;
-    border-bottom: 1px solid var(--secundario);
-}
-
-#detalleEspecificaciones>li>ul{
-    list-style-type: none;
-}
-
-
-#conectividad ul{
-    list-style-type: none;
-}
-
 
 #botonAgregarCarrito{
     display: inline-block;

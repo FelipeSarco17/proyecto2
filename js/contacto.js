@@ -16,8 +16,3 @@ function cargarMensajeCliente(data){
 }
 
 
-window.onload = () =>{
-
-    actualizarBotonLogin();
-
-}

@@ -1,14 +1,11 @@
 let productoMostrar = leerProductoElegido();
 let productPage = document.querySelector("#contenedorEspecificaciones");
+console.log(productoMostrar);
 
+window.onload = () =>{
+    productPage.innerHTML = `
 
-switch(productoMostrar.categoria){
-    case "Placas de Video Radeon AMD":
-        let especificaciones = Object.keys(productoMostrar.especificaciones);
-        let conectividadKeys = Object.keys(productoMostrar.especificaciones.Conectividad);
-        productPage.innerHTML +=`
-        
-        <div id="contenedorPrecioImagen">
+    <div id="contenedorPrecioImagen">
         <img id="imagenProducto"
             src="${productoMostrar.imagen}"
             alt="">
@@ -32,57 +29,18 @@ switch(productoMostrar.categoria){
             </div>
             <button id="botonAgregarCarrito"  onclick="añadirProductoAlCarrito(${productoMostrar.id})">Sumar al carrito</button>
         </article>
+        
     </div>
-    <article id="especificaciones">
-        <div id="especificacionesGenerales">
-            <h3>Especificaciones Generales</h3>
-        <ul id="detalleEspecificaciones">
-            <li>${especificaciones[0]}: ${productoMostrar.especificaciones.Tipo}</li>
-            <li>${especificaciones[1]}: ${productoMostrar.especificaciones.Ancho}</li>
-            <li>${especificaciones[2]}: ${productoMostrar.especificaciones.Largo}</li>
-            <li>${especificaciones[3]}: ${productoMostrar.especificaciones.Espesor}</li>
-        </ul>
-        </div>
-        <div id="conectividad">
-            <h3>${especificaciones[4]}</h3>
-            <ul>
-                <li>${conectividadKeys[0]}: ${productoMostrar.especificaciones.Conectividad.Dvi}</li>
-                <li>${conectividadKeys[1]}: ${productoMostrar.especificaciones.Conectividad.HDMI}</li>
-                <li>${conectividadKeys[2]}: ${productoMostrar.especificaciones.Conectividad.DisplayPorts}</li>
-            </ul>
-        </div>
-        
+    <article id="descripcion">
+    <h3>Descripcion</h3>
+    <p>${productoMostrar.descripcion}</p>
     </article>
-        
-        `;
 
-    
-        break;
-    case "Placas de Video GeForce": break;
-    case "Fuentes": break;
-    case "Procesadores Intel": break;
-    case "Procesadores AMD": break;
-    case "Mothers AMD": break;
-    case "Mothers Intel": break;
-    case "Monitores y pantallas": break;
-    case "Sillas Gamers": break;
-    case "Auriculares": break;
-    case "Teclados": break;
-    case "Mouses": break;
-    case "Mouse Pads": break;
-    case "Microfonos": break;
-    case "Webcam": break;
-    case "Joystick": break;
-    case "Parlantes": break;
-    case "Memorias": break;
-    case "Memorias Notebook": break;
-    case "Discos Rigidos": break;
-    case "Discos Externos": break;
-    case "Discos Solidos SSD": break;
-    case "Gabinetes": break;
-    default: break;
-    
+`;
 }
+
+
+
 
 
 

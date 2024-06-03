@@ -1,3 +1,4 @@
+actualizarBotonLogin();
 
 function actualizarBotonLogin(){
     let usuarioLogin = leerUsuarioLogueado();

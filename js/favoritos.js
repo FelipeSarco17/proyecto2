@@ -6,11 +6,6 @@ favoritos = leerFavoritos();
 console.log(favoritos);
 
 
-window.onload = () =>{
-
-    actualizarBotonLogin();
-
-}
 
 if(favoritos.length != 0){
     listadoVacio.style.display = "none";

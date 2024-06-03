@@ -11,11 +11,7 @@ if(carrito.length!=0){
 }
 
 
-window.onload = () =>{
 
-    actualizarBotonLogin();
-
-}
 
 function leerCarrito(){
     let carrito = localStorage.getItem("carrito");

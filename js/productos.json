@@ -5,33 +5,21 @@
         "nombre": "Fuente Cougar 750W 80 Plus Gold GEC750" ,
         "precio": "123550" ,
         "categoria": "Fuentes",
-        "especificaciones": {"certificacion":"80 Plus Gold GEC750","modular": false},
+        "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque repellendus officia velit a nisi in facere asperiores ex ipsam eligendi suscipit natus voluptatum eaque aperiam vel, ipsa voluptatibus quam nesciunt?Eaque consectetur laborum blanditiis aliquam reiciendis numquam alias tenetur expedita ad est! Aperiam nostrum beatae iusto nihil totam sapiente provident suscipit, possimus eum veniam consequatur fugiat sit culpa vero reprehenderit? Architecto est nesciunt ab vel nulla itaque culpa corporis voluptates quod eaque maxime, minima corrupti labore doloribus iusto incidunt, similique laborum sint ducimus at praesentium cum sequi expedita. Maxime, unde.",
         "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_39112_Fuente_Cougar_750W_80_Plus_Gold_GEC750_1d2f2d18-grn.jpg",
         "enCarrito": false,
         "enFavoritos": false,
         "destacado":true,
         "nuevo":false,
         "cantidadEnCarrito": "0",
-        "link": "./error404.html"        
+        "link": "./productPage.html"        
     },
     {
         "id": 2,
         "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
         "precio": "123551" ,
         "categoria": "Placas de Video Radeon AMD",
-        "especificaciones": { "Tipo":"pcie",
-                              "Ancho":120,
-                              "Largo":270,
-                              "Espesor":2,
-                              "Conectividad": {
-                                                "Dvi": 2,
-                                                "HDMI": 1,
-                                                "DisplayPorts": 3
-                                                }
-                              
-
-        
-                            },
+        "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque repellendus officia velit a nisi in facere asperiores ex ipsam eligendi suscipit natus voluptatum eaque aperiam vel, ipsa voluptatibus quam nesciunt?Eaque consectetur laborum blanditiis aliquam reiciendis numquam alias tenetur expedita ad est! Aperiam nostrum beatae iusto nihil totam sapiente provident suscipit, possimus eum veniam consequatur fugiat sit culpa vero reprehenderit? Architecto est nesciunt ab vel nulla itaque culpa corporis voluptates quod eaque maxime, minima corrupti labore doloribus iusto incidunt, similique laborum sint ducimus at praesentium cum sequi expedita. Maxime, unde.",
                 
         "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_39191_Placa_de_Video_XFX_Radeon_RX_580_8GB_GDDR5_GTS_2048SP_8c7b9091-grn.jpg",
         "enCarrito": false,
@@ -46,67 +34,49 @@
         "nombre": "Silla Gamer Corsair T3 Rush Fabric Carbon" ,
         "precio": "123550" ,
         "categoria": "Sillas Gamers",
-        "especificaciones": {"pesoMaximo": 120 },
+        "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque repellendus officia velit a nisi in facere asperiores ex ipsam eligendi suscipit natus voluptatum eaque aperiam vel, ipsa voluptatibus quam nesciunt?Eaque consectetur laborum blanditiis aliquam reiciendis numquam alias tenetur expedita ad est! Aperiam nostrum beatae iusto nihil totam sapiente provident suscipit, possimus eum veniam consequatur fugiat sit culpa vero reprehenderit? Architecto est nesciunt ab vel nulla itaque culpa corporis voluptates quod eaque maxime, minima corrupti labore doloribus iusto incidunt, similique laborum sint ducimus at praesentium cum sequi expedita. Maxime, unde.",
         "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_36811_Silla_Gamer_Corsair_T3_Rush_Fabric_Carbon__Peso_MAX._120kg__88bef6b4-grn.jpg",
         "enCarrito": false,
         "enFavoritos": false,
         "destacado":true,
         "nuevo":false,
         "cantidadEnCarrito": "0",
-        "link": "./error404.html"
+        "link": "./productPage.html"
     },
     {
         "id": 4,
         "nombre": "Gabinete Antec NX292 MESH White RGB" ,
         "precio": "123550" ,
         "categoria": "Gabinetes",
-        "especificaciones": {"Ancho": "200",
-                             "Alto":"270",
-                             "Profundidad":"400",
-                             "FactorMother": "ITX,M-ATX,ATX,E-ATX",
-                             "USB": "2",
-                             "capacidadCoolers": "4"
-                            },
+        "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque repellendus officia velit a nisi in facere asperiores ex ipsam eligendi suscipit natus voluptatum eaque aperiam vel, ipsa voluptatibus quam nesciunt?Eaque consectetur laborum blanditiis aliquam reiciendis numquam alias tenetur expedita ad est! Aperiam nostrum beatae iusto nihil totam sapiente provident suscipit, possimus eum veniam consequatur fugiat sit culpa vero reprehenderit? Architecto est nesciunt ab vel nulla itaque culpa corporis voluptates quod eaque maxime, minima corrupti labore doloribus iusto incidunt, similique laborum sint ducimus at praesentium cum sequi expedita. Maxime, unde.",
         "imagen":"https://imagenes.compragamer.com/productos/compragamer_Imganen_general_38038_Gabinete_Antec_NX292_MESH_White_RGB_Vidrio_Templado_2184f894-grn.jpg",
         "enCarrito": false,
         "enFavoritos": false,
         "destacado":true,
         "nuevo":false,
         "cantidadEnCarrito": "0",
-        "link": "./error404.html"
+        "link": "./productPage.html"
     },
     {
         "id": 5,
         "nombre": "Monitor ASUS 21.5'' VP228HE" ,
         "precio": "123550" ,
         "categoria": "Monitores y pantallas",
-        "especificaciones": {"Panel":"TN","Conectividad":{"HDMI": "1","VGA":"1"},"Frecuencia":"144","Tamaño":"22"},
+        "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque repellendus officia velit a nisi in facere asperiores ex ipsam eligendi suscipit natus voluptatum eaque aperiam vel, ipsa voluptatibus quam nesciunt?Eaque consectetur laborum blanditiis aliquam reiciendis numquam alias tenetur expedita ad est! Aperiam nostrum beatae iusto nihil totam sapiente provident suscipit, possimus eum veniam consequatur fugiat sit culpa vero reprehenderit? Architecto est nesciunt ab vel nulla itaque culpa corporis voluptates quod eaque maxime, minima corrupti labore doloribus iusto incidunt, similique laborum sint ducimus at praesentium cum sequi expedita. Maxime, unde.",
         "imagen":"https://imagenes.compragamer.com/productos/compragamer_Imganen_general_17959_Monitor_ASUS_21.5__VP228HE_TN_Full_HD_1ms_HDMI_VGA_Audio_0982edcc-grn.jpg",
         "enCarrito": false,
         "enFavoritos": false,
         "destacado":true,
         "nuevo":false,
         "cantidadEnCarrito": "0",
-        "link": "./error404.html"
+        "link": "./productPage.html"
     },
     {
         "id": 6,
         "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
         "precio": "121234" ,
         "categoria": "Placas de Video Radeon AMD",
-        "especificaciones": {  "Tipo":"pcie",
-                              "Ancho":"120",
-                              "Largo":"270",
-                              "Espesor":"2",
-                              "Conectividad": {
-                                                "Dvi": "1",
-                                                "HDMI": "1",
-                                                "DisplayPorts": "3"
-                                                }
-                              
-
-        
-                            },
+        "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque repellendus officia velit a nisi in facere asperiores ex ipsam eligendi suscipit natus voluptatum eaque aperiam vel, ipsa voluptatibus quam nesciunt?Eaque consectetur laborum blanditiis aliquam reiciendis numquam alias tenetur expedita ad est! Aperiam nostrum beatae iusto nihil totam sapiente provident suscipit, possimus eum veniam consequatur fugiat sit culpa vero reprehenderit? Architecto est nesciunt ab vel nulla itaque culpa corporis voluptates quod eaque maxime, minima corrupti labore doloribus iusto incidunt, similique laborum sint ducimus at praesentium cum sequi expedita. Maxime, unde.",
                 
         "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_39191_Placa_de_Video_XFX_Radeon_RX_580_8GB_GDDR5_GTS_2048SP_8c7b9091-grn.jpg",
         "enCarrito": false,
@@ -121,19 +91,7 @@
         "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
         "precio": "123551" ,
         "categoria": "Placas de Video Radeon AMD",
-        "especificaciones": {  "Tipo":"pcie",
-                              "Ancho":"120",
-                              "Largo":"270",
-                              "Espesor":"2",
-                              "Conectividad": {
-                                                "Dvi": "1",
-                                                "HDMI": "1",
-                                                "DisplayPorts": "3"
-                                                }
-                              
-
-        
-                            },
+        "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque repellendus officia velit a nisi in facere asperiores ex ipsam eligendi suscipit natus voluptatum eaque aperiam vel, ipsa voluptatibus quam nesciunt?Eaque consectetur laborum blanditiis aliquam reiciendis numquam alias tenetur expedita ad est! Aperiam nostrum beatae iusto nihil totam sapiente provident suscipit, possimus eum veniam consequatur fugiat sit culpa vero reprehenderit? Architecto est nesciunt ab vel nulla itaque culpa corporis voluptates quod eaque maxime, minima corrupti labore doloribus iusto incidunt, similique laborum sint ducimus at praesentium cum sequi expedita. Maxime, unde.",
                 
         "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_39191_Placa_de_Video_XFX_Radeon_RX_580_8GB_GDDR5_GTS_2048SP_8c7b9091-grn.jpg",
         "enCarrito": false,
@@ -148,19 +106,7 @@
         "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
         "precio": "123551" ,
         "categoria": "Placas de Video Radeon AMD",
-        "especificaciones": {  "Tipo":"pcie",
-                              "Ancho":"120",
-                              "Largo":"270",
-                              "Espesor":"2",
-                              "Conectividad": {
-                                                "Dvi": "1",
-                                                "HDMI": "1",
-                                                "DisplayPorts": "3"
-                                                }
-                              
-
-        
-                            },
+        "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque repellendus officia velit a nisi in facere asperiores ex ipsam eligendi suscipit natus voluptatum eaque aperiam vel, ipsa voluptatibus quam nesciunt?Eaque consectetur laborum blanditiis aliquam reiciendis numquam alias tenetur expedita ad est! Aperiam nostrum beatae iusto nihil totam sapiente provident suscipit, possimus eum veniam consequatur fugiat sit culpa vero reprehenderit? Architecto est nesciunt ab vel nulla itaque culpa corporis voluptates quod eaque maxime, minima corrupti labore doloribus iusto incidunt, similique laborum sint ducimus at praesentium cum sequi expedita. Maxime, unde.",
                 
         "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_39191_Placa_de_Video_XFX_Radeon_RX_580_8GB_GDDR5_GTS_2048SP_8c7b9091-grn.jpg",
         "enCarrito": false,
@@ -175,19 +121,7 @@
         "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
         "precio": "123551" ,
         "categoria": "Placas de Video Radeon AMD",
-        "especificaciones": {  "Tipo":"pcie",
-                              "Ancho":"120",
-                              "Largo":"270",
-                              "Espesor":"2",
-                              "Conectividad": {
-                                                "Dvi": "1",
-                                                "HDMI": "1",
-                                                "DisplayPorts": "3"
-                                                }
-                              
-
-        
-                            },
+        "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque repellendus officia velit a nisi in facere asperiores ex ipsam eligendi suscipit natus voluptatum eaque aperiam vel, ipsa voluptatibus quam nesciunt?Eaque consectetur laborum blanditiis aliquam reiciendis numquam alias tenetur expedita ad est! Aperiam nostrum beatae iusto nihil totam sapiente provident suscipit, possimus eum veniam consequatur fugiat sit culpa vero reprehenderit? Architecto est nesciunt ab vel nulla itaque culpa corporis voluptates quod eaque maxime, minima corrupti labore doloribus iusto incidunt, similique laborum sint ducimus at praesentium cum sequi expedita. Maxime, unde.",
                 
         "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_39191_Placa_de_Video_XFX_Radeon_RX_580_8GB_GDDR5_GTS_2048SP_8c7b9091-grn.jpg",
         "enCarrito": false,
@@ -202,19 +136,7 @@
         "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
         "precio": "123551" ,
         "categoria": "Placas de Video Radeon AMD",
-        "especificaciones": {  "Tipo":"pcie",
-                              "Ancho":"120",
-                              "Largo":"270",
-                              "Espesor":"2",
-                              "Conectividad": {
-                                                "Dvi": "1",
-                                                "HDMI": "1",
-                                                "DisplayPorts": "3"
-                                                }
-                              
-
-        
-                            },
+        "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque repellendus officia velit a nisi in facere asperiores ex ipsam eligendi suscipit natus voluptatum eaque aperiam vel, ipsa voluptatibus quam nesciunt?Eaque consectetur laborum blanditiis aliquam reiciendis numquam alias tenetur expedita ad est! Aperiam nostrum beatae iusto nihil totam sapiente provident suscipit, possimus eum veniam consequatur fugiat sit culpa vero reprehenderit? Architecto est nesciunt ab vel nulla itaque culpa corporis voluptates quod eaque maxime, minima corrupti labore doloribus iusto incidunt, similique laborum sint ducimus at praesentium cum sequi expedita. Maxime, unde.",
                 
         "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_39191_Placa_de_Video_XFX_Radeon_RX_580_8GB_GDDR5_GTS_2048SP_8c7b9091-grn.jpg",
         "enCarrito": false,
@@ -229,19 +151,7 @@
         "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
         "precio": "123551" ,
         "categoria": "Placas de Video Radeon AMD",
-        "especificaciones": {  "Tipo":"pcie",
-                              "Ancho":"120",
-                              "Largo":"270",
-                              "Espesor":"2",
-                              "Conectividad": {
-                                                "Dvi": "1",
-                                                "HDMI": "1",
-                                                "DisplayPorts": "3"
-                                                }
-                              
-
-        
-                            },
+        "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque repellendus officia velit a nisi in facere asperiores ex ipsam eligendi suscipit natus voluptatum eaque aperiam vel, ipsa voluptatibus quam nesciunt?Eaque consectetur laborum blanditiis aliquam reiciendis numquam alias tenetur expedita ad est! Aperiam nostrum beatae iusto nihil totam sapiente provident suscipit, possimus eum veniam consequatur fugiat sit culpa vero reprehenderit? Architecto est nesciunt ab vel nulla itaque culpa corporis voluptates quod eaque maxime, minima corrupti labore doloribus iusto incidunt, similique laborum sint ducimus at praesentium cum sequi expedita. Maxime, unde.",
                 
         "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_39191_Placa_de_Video_XFX_Radeon_RX_580_8GB_GDDR5_GTS_2048SP_8c7b9091-grn.jpg",
         "enCarrito": false,
@@ -256,19 +166,7 @@
         "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
         "precio": "123551" ,
         "categoria": "Placas de Video Radeon AMD",
-        "especificaciones": {  "Tipo":"pcie",
-                              "Ancho":"120",
-                              "Largo":"270",
-                              "Espesor":"2",
-                              "Conectividad": {
-                                                "Dvi": "1",
-                                                "HDMI": "1",
-                                                "DisplayPorts": "3"
-                                                }
-                              
-
-        
-                            },
+        "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque repellendus officia velit a nisi in facere asperiores ex ipsam eligendi suscipit natus voluptatum eaque aperiam vel, ipsa voluptatibus quam nesciunt?Eaque consectetur laborum blanditiis aliquam reiciendis numquam alias tenetur expedita ad est! Aperiam nostrum beatae iusto nihil totam sapiente provident suscipit, possimus eum veniam consequatur fugiat sit culpa vero reprehenderit? Architecto est nesciunt ab vel nulla itaque culpa corporis voluptates quod eaque maxime, minima corrupti labore doloribus iusto incidunt, similique laborum sint ducimus at praesentium cum sequi expedita. Maxime, unde.",
                 
         "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_39191_Placa_de_Video_XFX_Radeon_RX_580_8GB_GDDR5_GTS_2048SP_8c7b9091-grn.jpg",
         "enCarrito": false,
@@ -283,19 +181,7 @@
         "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
         "precio": "123551" ,
         "categoria": "Placas de Video Radeon AMD",
-        "especificaciones": {  "Tipo":"pcie",
-                              "Ancho":"120",
-                              "Largo":"270",
-                              "Espesor":"2",
-                              "Conectividad": {
-                                                "Dvi": "1",
-                                                "HDMI": "1",
-                                                "DisplayPorts": "3"
-                                                }
-                              
-
-        
-                            },
+        "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque repellendus officia velit a nisi in facere asperiores ex ipsam eligendi suscipit natus voluptatum eaque aperiam vel, ipsa voluptatibus quam nesciunt?Eaque consectetur laborum blanditiis aliquam reiciendis numquam alias tenetur expedita ad est! Aperiam nostrum beatae iusto nihil totam sapiente provident suscipit, possimus eum veniam consequatur fugiat sit culpa vero reprehenderit? Architecto est nesciunt ab vel nulla itaque culpa corporis voluptates quod eaque maxime, minima corrupti labore doloribus iusto incidunt, similique laborum sint ducimus at praesentium cum sequi expedita. Maxime, unde.",
                 
         "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_39191_Placa_de_Video_XFX_Radeon_RX_580_8GB_GDDR5_GTS_2048SP_8c7b9091-grn.jpg",
         "enCarrito": false,
@@ -310,19 +196,7 @@
         "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
         "precio": "123551" ,
         "categoria": "Placas de Video Radeon AMD",
-        "especificaciones": {  "Tipo":"pcie",
-                              "Ancho":"120",
-                              "Largo":"270",
-                              "Espesor":"2",
-                              "Conectividad": {
-                                                "Dvi": "1",
-                                                "HDMI": "1",
-                                                "DisplayPorts": "3"
-                                                }
-                              
-
-        
-                            },
+        "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque repellendus officia velit a nisi in facere asperiores ex ipsam eligendi suscipit natus voluptatum eaque aperiam vel, ipsa voluptatibus quam nesciunt?Eaque consectetur laborum blanditiis aliquam reiciendis numquam alias tenetur expedita ad est! Aperiam nostrum beatae iusto nihil totam sapiente provident suscipit, possimus eum veniam consequatur fugiat sit culpa vero reprehenderit? Architecto est nesciunt ab vel nulla itaque culpa corporis voluptates quod eaque maxime, minima corrupti labore doloribus iusto incidunt, similique laborum sint ducimus at praesentium cum sequi expedita. Maxime, unde.",
                 
         "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_39191_Placa_de_Video_XFX_Radeon_RX_580_8GB_GDDR5_GTS_2048SP_8c7b9091-grn.jpg",
         "enCarrito": false,
@@ -337,19 +211,7 @@
         "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
         "precio": "123551" ,
         "categoria": "Placas de Video Radeon AMD",
-        "especificaciones": {  "Tipo":"pcie",
-                              "Ancho":"120",
-                              "Largo":"270",
-                              "Espesor":"2",
-                              "Conectividad": {
-                                                "Dvi": "1",
-                                                "HDMI": "1",
-                                                "DisplayPorts": "3"
-                                                }
-                              
-
-        
-                            },
+        "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque repellendus officia velit a nisi in facere asperiores ex ipsam eligendi suscipit natus voluptatum eaque aperiam vel, ipsa voluptatibus quam nesciunt?Eaque consectetur laborum blanditiis aliquam reiciendis numquam alias tenetur expedita ad est! Aperiam nostrum beatae iusto nihil totam sapiente provident suscipit, possimus eum veniam consequatur fugiat sit culpa vero reprehenderit? Architecto est nesciunt ab vel nulla itaque culpa corporis voluptates quod eaque maxime, minima corrupti labore doloribus iusto incidunt, similique laborum sint ducimus at praesentium cum sequi expedita. Maxime, unde.",
                 
         "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_39191_Placa_de_Video_XFX_Radeon_RX_580_8GB_GDDR5_GTS_2048SP_8c7b9091-grn.jpg",
         "enCarrito": false,
@@ -364,19 +226,7 @@
         "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
         "precio": "123551" ,
         "categoria": "Placas de Video Radeon AMD",
-        "especificaciones": {  "Tipo":"pcie",
-                              "Ancho":"120",
-                              "Largo":"270",
-                              "Espesor":"2",
-                              "Conectividad": {
-                                                "Dvi": "1",
-                                                "HDMI": "1",
-                                                "DisplayPorts": "3"
-                                                }
-                              
-
-        
-                            },
+        "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque repellendus officia velit a nisi in facere asperiores ex ipsam eligendi suscipit natus voluptatum eaque aperiam vel, ipsa voluptatibus quam nesciunt?Eaque consectetur laborum blanditiis aliquam reiciendis numquam alias tenetur expedita ad est! Aperiam nostrum beatae iusto nihil totam sapiente provident suscipit, possimus eum veniam consequatur fugiat sit culpa vero reprehenderit? Architecto est nesciunt ab vel nulla itaque culpa corporis voluptates quod eaque maxime, minima corrupti labore doloribus iusto incidunt, similique laborum sint ducimus at praesentium cum sequi expedita. Maxime, unde.",
                 
         "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_39191_Placa_de_Video_XFX_Radeon_RX_580_8GB_GDDR5_GTS_2048SP_8c7b9091-grn.jpg",
         "enCarrito": false,
@@ -391,19 +241,7 @@
         "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
         "precio": "123551" ,
         "categoria": "Placas de Video Radeon AMD",
-        "especificaciones": {  "Tipo":"pcie",
-                              "Ancho":"120",
-                              "Largo":"270",
-                              "Espesor":"2",
-                              "Conectividad": {
-                                                "Dvi": "1",
-                                                "HDMI": "1",
-                                                "DisplayPorts": "3"
-                                                }
-                              
-
-        
-                            },
+        "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque repellendus officia velit a nisi in facere asperiores ex ipsam eligendi suscipit natus voluptatum eaque aperiam vel, ipsa voluptatibus quam nesciunt?Eaque consectetur laborum blanditiis aliquam reiciendis numquam alias tenetur expedita ad est! Aperiam nostrum beatae iusto nihil totam sapiente provident suscipit, possimus eum veniam consequatur fugiat sit culpa vero reprehenderit? Architecto est nesciunt ab vel nulla itaque culpa corporis voluptates quod eaque maxime, minima corrupti labore doloribus iusto incidunt, similique laborum sint ducimus at praesentium cum sequi expedita. Maxime, unde.",
                 
         "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_39191_Placa_de_Video_XFX_Radeon_RX_580_8GB_GDDR5_GTS_2048SP_8c7b9091-grn.jpg",
         "enCarrito": false,
@@ -418,19 +256,7 @@
         "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
         "precio": "123551" ,
         "categoria": "Placas de Video Radeon AMD",
-        "especificaciones": {  "Tipo":"pcie",
-                              "Ancho":"120",
-                              "Largo":"270",
-                              "Espesor":"2",
-                              "Conectividad": {
-                                                "Dvi": "1",
-                                                "HDMI": "1",
-                                                "DisplayPorts": "3"
-                                                }
-                              
-
-        
-                            },
+        "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque repellendus officia velit a nisi in facere asperiores ex ipsam eligendi suscipit natus voluptatum eaque aperiam vel, ipsa voluptatibus quam nesciunt?Eaque consectetur laborum blanditiis aliquam reiciendis numquam alias tenetur expedita ad est! Aperiam nostrum beatae iusto nihil totam sapiente provident suscipit, possimus eum veniam consequatur fugiat sit culpa vero reprehenderit? Architecto est nesciunt ab vel nulla itaque culpa corporis voluptates quod eaque maxime, minima corrupti labore doloribus iusto incidunt, similique laborum sint ducimus at praesentium cum sequi expedita. Maxime, unde.",
                 
         "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_39191_Placa_de_Video_XFX_Radeon_RX_580_8GB_GDDR5_GTS_2048SP_8c7b9091-grn.jpg",
         "enCarrito": false,
@@ -445,19 +271,7 @@
         "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
         "precio": "123551" ,
         "categoria": "Placas de Video Radeon AMD",
-        "especificaciones": {  "Tipo":"pcie",
-                              "Ancho":"120",
-                              "Largo":"270",
-                              "Espesor":"2",
-                              "Conectividad": {
-                                                "Dvi": "1",
-                                                "HDMI": "1",
-                                                "DisplayPorts": "3"
-                                                }
-                              
-
-        
-                            },
+        "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque repellendus officia velit a nisi in facere asperiores ex ipsam eligendi suscipit natus voluptatum eaque aperiam vel, ipsa voluptatibus quam nesciunt?Eaque consectetur laborum blanditiis aliquam reiciendis numquam alias tenetur expedita ad est! Aperiam nostrum beatae iusto nihil totam sapiente provident suscipit, possimus eum veniam consequatur fugiat sit culpa vero reprehenderit? Architecto est nesciunt ab vel nulla itaque culpa corporis voluptates quod eaque maxime, minima corrupti labore doloribus iusto incidunt, similique laborum sint ducimus at praesentium cum sequi expedita. Maxime, unde.",
                 
         "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_39191_Placa_de_Video_XFX_Radeon_RX_580_8GB_GDDR5_GTS_2048SP_8c7b9091-grn.jpg",
         "enCarrito": false,
@@ -473,19 +287,7 @@
         "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
         "precio": "123551" ,
         "categoria": "Placas de Video Radeon AMD",
-        "especificaciones": {  "Tipo":"pcie",
-                              "Ancho":"120",
-                              "Largo":"270",
-                              "Espesor":"2",
-                              "Conectividad": {
-                                                "Dvi": "1",
-                                                "HDMI": "1",
-                                                "DisplayPorts": "3"
-                                                }
-                              
-
-        
-                            },
+        "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque repellendus officia velit a nisi in facere asperiores ex ipsam eligendi suscipit natus voluptatum eaque aperiam vel, ipsa voluptatibus quam nesciunt?Eaque consectetur laborum blanditiis aliquam reiciendis numquam alias tenetur expedita ad est! Aperiam nostrum beatae iusto nihil totam sapiente provident suscipit, possimus eum veniam consequatur fugiat sit culpa vero reprehenderit? Architecto est nesciunt ab vel nulla itaque culpa corporis voluptates quod eaque maxime, minima corrupti labore doloribus iusto incidunt, similique laborum sint ducimus at praesentium cum sequi expedita. Maxime, unde.",
                 
         "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_39191_Placa_de_Video_XFX_Radeon_RX_580_8GB_GDDR5_GTS_2048SP_8c7b9091-grn.jpg",
         "enCarrito": false,
@@ -500,19 +302,7 @@
         "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
         "precio": "123551" ,
         "categoria": "Placas de Video Radeon AMD",
-        "especificaciones": {  "Tipo":"pcie",
-                              "Ancho":"120",
-                              "Largo":"270",
-                              "Espesor":"2",
-                              "Conectividad": {
-                                                "Dvi": "1",
-                                                "HDMI": "1",
-                                                "DisplayPorts": "3"
-                                                }
-                              
-
-        
-                            },
+        "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque repellendus officia velit a nisi in facere asperiores ex ipsam eligendi suscipit natus voluptatum eaque aperiam vel, ipsa voluptatibus quam nesciunt?Eaque consectetur laborum blanditiis aliquam reiciendis numquam alias tenetur expedita ad est! Aperiam nostrum beatae iusto nihil totam sapiente provident suscipit, possimus eum veniam consequatur fugiat sit culpa vero reprehenderit? Architecto est nesciunt ab vel nulla itaque culpa corporis voluptates quod eaque maxime, minima corrupti labore doloribus iusto incidunt, similique laborum sint ducimus at praesentium cum sequi expedita. Maxime, unde.",
                 
         "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_39191_Placa_de_Video_XFX_Radeon_RX_580_8GB_GDDR5_GTS_2048SP_8c7b9091-grn.jpg",
         "enCarrito": false,
@@ -527,19 +317,7 @@
         "nombre": "Placa de Video XFX Radeon RX 580 8GB GDDR5" ,
         "precio": "123551" ,
         "categoria": "Placas de Video Radeon AMD",
-        "especificaciones": {  "Tipo":"pcie",
-                              "Ancho":"120",
-                              "Largo":"270",
-                              "Espesor":"2",
-                              "Conectividad": {
-                                                "Dvi": "1",
-                                                "HDMI": "1",
-                                                "DisplayPorts": "3"
-                                                }
-                              
-
-        
-                            },
+        "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque repellendus officia velit a nisi in facere asperiores ex ipsam eligendi suscipit natus voluptatum eaque aperiam vel, ipsa voluptatibus quam nesciunt?Eaque consectetur laborum blanditiis aliquam reiciendis numquam alias tenetur expedita ad est! Aperiam nostrum beatae iusto nihil totam sapiente provident suscipit, possimus eum veniam consequatur fugiat sit culpa vero reprehenderit? Architecto est nesciunt ab vel nulla itaque culpa corporis voluptates quod eaque maxime, minima corrupti labore doloribus iusto incidunt, similique laborum sint ducimus at praesentium cum sequi expedita. Maxime, unde.",
                 
         "imagen": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_39191_Placa_de_Video_XFX_Radeon_RX_580_8GB_GDDR5_GTS_2048SP_8c7b9091-grn.jpg",
         "enCarrito": false,
