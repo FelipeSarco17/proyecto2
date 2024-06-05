@@ -1,6 +1,7 @@
 let productosHomePage = [];
 let favoritosHomePage = [];
 let carritoHomePage = [];
+let usuariosHomePage = [];
 let productoElegido;
 
 fetch("./js/productos.json")
@@ -14,6 +15,15 @@ fetch("./js/productos.json")
     })
     .catch((error) => console.error("No se pudo conseguir la data:", error));
 
+fetch("./js/usuarios.json")
+.then(response => response.json())
+.then((data)=>{
+    usuariosHomePage = data;
+    if(JSON.parse(localStorage.getItem("usuarios")) == null){
+        cargarUsuarios(usuariosHomePage);
+    }
+})
+.catch((error) => console.error("No se pudo conseguir la data:", error));
 
 
 window.onload = () => {
@@ -136,26 +146,7 @@ window.onload = () => {
 
 
 
-let usuarios = [{
-    email: "felipe@gmail.com",
-    password: "1234",
-    nombre: "Felipe",
-    apellido: "sarco",
-    telefono: "38123123",
-    domicilio: "bascary 4365",
-    rango: "admin"
-}
-    , {
-    email: "gustavo@gmail.com",
-    password: "4324",
-    nombre: "Gustavo",
-    apellido: "sarco",
-    telefono: "38123123",
-    domicilio: "bascary 4365",
-    rango: "cliente"
-},
 
-];
 
 
 

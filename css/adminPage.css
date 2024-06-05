@@ -12,9 +12,32 @@ main{
     align-items: start;
 }
 
+#contenedorBotonesAdmin{
+    display: flex;
+    flex-direction: column;
+}
+
+#contenedorBotonesAdmin button{
+    margin: 10px;
+}
 
 
-#productosAdminPage{
+.principalAdminPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: 2px solid var(--secundario);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.principalAdminPage button{
+    margin: 10px;
+}
+
+.productosAdminPage{
     width: 950px;
     display: grid;
     grid-template-columns: 200px 200px 200px 200px 200px;
@@ -22,10 +45,51 @@ main{
     gap: 20px 10px ;
 }
 
-#productosAdminPage h1{
+.productosAdminPage h1{
     color: white;
     grid-column-end: span 5;
     grid-row-end: 1;
+}
+
+.usuariosAdminPage{
+    color: white;
+}
+
+#contenedorBusquedaUsuario{
+    display: flex;
+}
+
+#contenedorBusquedaUsuario input{
+    border: 2px solid var(--secundario);
+    border-radius: 20px;
+    width: 400px;
+}
+
+#contenedorBusquedaUsuario button{
+    margin-left: 10px;
+}
+
+.resultado{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+.resultado img{
+    width: 100px;
+}
+
+
+.cardUsuario{
+    margin-top: 20px;
+    color: black;
+    padding: 30px;
+    background-color: white;
+    border-radius: 20px;
 }
 
 .tarjetaProductoCategoria{

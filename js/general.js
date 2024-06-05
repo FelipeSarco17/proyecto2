@@ -1,5 +1,8 @@
 actualizarBotonLogin();
 
+let usuarios = leerUsuarios();
+console.log(usuarios);
+
 function actualizarBotonLogin(){
     let usuarioLogin = leerUsuarioLogueado();
     let navLinks = document.querySelector("#navParteIzquierda");
@@ -28,6 +31,10 @@ function leerUsuarioLogueado() {
     if (usuarioLogueado) {
         return usuarioLogueado;
     }
+}
+
+function borrarUsuarioLogueado(){
+    localStorage.removeItem("usuarioLogueado");
 }
 
 function leerFavoritos() {
@@ -66,6 +73,17 @@ function cargarProductoElegido(data) {
     localStorage.setItem("productoElegido", JSON.stringify(data))
 }
 
+function cargarUsuarios(data){
+    localStorage.setItem("usuarios",JSON.stringify(data));
+}
+
+function leerUsuarios(){
+    let usuarios = JSON.parse(localStorage.getItem("usuarios"));
+    if(usuarios){
+        return usuarios;
+    }
+}
+
 // ****************************
 
 
@@ -88,7 +106,6 @@ botonLogin.addEventListener("click", (e) => {
         if (usuarios[i].email == email && usuarios[i].password == password) {
             let perfil = document.querySelector("#botonLogIn");
             botonLogin.setAttribute("data-bs-dismiss", "modal");
-            cargarUsuario(usuarios[i]);
             perfil.innerHTML = `<img src="./img/user.svg" alt="LogoUser">${usuarios[i].nombre}`;
             login = true;
             if(usuarios[i].rango == "admin"){
@@ -134,7 +151,6 @@ botonLogin.addEventListener("click", (e) => {
 const botonRegistro = document.querySelector("#botonRegistrarse");
 const inputsRegistro = document.querySelectorAll(".inputRegistro");
 botonRegistro.setAttribute("data-bs-dismiss", " ");
-
 
 botonRegistro.addEventListener("click", () => {
 

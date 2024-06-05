@@ -1,5 +1,10 @@
 let productos = leerProductos();
-let productosAdminPage = document.querySelector("#productosAdminPage");
+let rangos = [
+
+    "cliente",
+    "admin"
+];
+
 let categorias = [
 
     "Placas de Video Radeon AMD",
@@ -27,11 +32,251 @@ let categorias = [
     "Gabinetes"
 ];
 
-window.onload = () => {
+function mostrarMenu(){
+    let main = document.querySelector("main");
+    main.innerHTML = `
 
+    <section id="menu" class="principalAdminPage">
+    <h1>Pagina de Administrador</h1>
+    <button class="botones" onclick="administrarUsuarios()">Administrar Usuarios</button>
+    <button class="botones" onclick="administrarProductos()">Administrar Productos</button>
+    </section>
+
+    `;
+}
+
+function administrarUsuarios(){
+    let main = document.querySelector("main");
+    main.innerHTML = `
+
+    <div id="contenedorBotonesAdmin">
+   
+    <button id="botonAgregarProducto" data-bs-toggle="modal" data-bs-target="#modalEditarUsuario" onclick="mostrarModalAgregarUsuario()" class="botones">Agregar Usuario</button>
+    <button class="botones" onclick="mostrarMenu()">Volver</button>
     
+    </div>
+    <section id="principalAdminPage" class="usuariosAdminPage">
+            <h1>Pagina de Administrador</h1>
+            <form id="contenedorBusquedaUsuario">
+                <input type="email" id="buscadorUsuario" placeholder="E-mail de usuario a modificar">
+                <button type="submit" class="botones" onclick="buscarUsuario()">Buscar</button>
+            </form>
+
+           
+
+    </section>  
+
+    <div class="modal fade" id="modalEditarUsuario" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1  id="tituloModal" class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modalBodyEditarUsuarios">
+
+            </div>
+            <div class="modal-footer" id="modalFooterEditarUsuarios">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    `;
+}
+
+function buscarUsuario(){
+
+    let email = document.querySelector("#buscadorUsuario").value;
+    let usuariosAdminPage = document.querySelector("#principalAdminPage");
+    let encontrado = false;
+    usuarios.forEach((usuario)=>{
+
+        if(usuario.email == email){
+            usuariosAdminPage.innerHTML += `
+
+            <article class="cardUsuario">
+               
+            <div class="card-body-categoria">
+
+               <h3>${usuario.nombre} ${usuario.apellido}</h3>
+                <h4>Rango: ${usuario.rango}</h5>
+               <div class="cardUsuarioDatos">
+                   <p class="tarjetaUsuario">
+                       ${usuario.email} 
+                   </p>
+                   <div class="contenedorBotonesCardsCategoria">
+
+                   <button href="" id="botonEliminarUsuario" class="botonFavoritos"
+                       onclick="eliminarUsuario(${usuario.id})" ><img src="./img/deleteButton.svg"
+                           alt="LogoFavoritos" class="logoFavCards"></button>
+                   <button href="" id="botonModificarUsuario" class="botonCarritoAñadir"
+                       onclick="mostrarModalEditarUsuario(${usuario.id})" data-bs-toggle="modal" data-bs-target="#modalEditarUsuario"><img src="./img/editButton.svg"
+                           alt="CarritoAñadir"></button>
+                   </div>
+               </div>
+           </div>
+           </article>
+            
+            `;
+
+            encontrado = true;
+        }
+
+    });
+
+    if(!encontrado){
+        usuariosAdminPage.innerHTML += `
+            <div class="resultado">
+                <img src="./img/personSearch.svg" alt="personSearchLogo">
+                <h2>Usuario No Encontrado</h2>
+            </div>
+        `;
+    }
+}
+
+function mostrarModalEditarUsuario(idUsuario){
+
+    let modalBody = document.querySelector("#modalBodyEditarUsuarios");
+    let modalFooter = document.querySelector("#modalFooterEditarUsuarios");
+    let tituloModal = document.querySelector("#tituloModal");
+    
+
+    tituloModal.innerText = "Editar Usuario";
+
+    modalBody.innerHTML  = `
+
+    <form>
+        <label>Rango</label>
+        <select id="cbRangos">
+        
+        </select>
+    </form>
+
+    `;
+
+    modalFooter.innerHTML = `
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+    <button type="button" class="btn btn-primary" onclick="editarUsuario(${idUsuario})">Guardar cambios</button>
+    `;
+
+    let cbRangos = document.querySelector("#cbRangos");
+    usuarios.forEach((usuario)=>{
+
+        if(usuario.id == idUsuario){
+
+            rangos.forEach((rango)=>{
+                if(rango == usuario.rango){
+                    cbRangos.innerHTML += `
+                        <option value="${rango}" selected>${rango}</option>
+                    `;
+                }
+                else{
+                    cbRangos.innerHTML += `
+                        <option value="${rango}">${rango}</option>
+                    `;
+                }
+            })
+
+
+
+        }
+
+    })
+
+
+   
+}
+
+function eliminarUsuario(idUsuario){
+    let usuarioLogueado = leerUsuarioLogueado()
+    let usuariosAdminPage = document.querySelector("#principalAdminPage");
+
+    usuarios.forEach((usuario)=>{
+
+        if(usuarioLogueado.email == usuario.email){
+            borrarUsuarioLogueado();
+            return;
+        }
+    })
+
+   usuarios = usuarios.filter((usuario)=>{
+        return usuario.id != idUsuario;
+
+   })
+
+   usuariosAdminPage.innerHTML = `
+   <h1>Pagina de Administrador</h1>
+   <form id="contenedorBusquedaUsuario">
+       <input type="email" id="buscadorUsuario" placeholder="E-mail de usuario a modificar">
+       <button type="submit" class="botones" onclick="buscarUsuario()">Buscar</button>
+   </form>
+
+   <div class="resultado">
+        <img src="./img/checkCircle.svg" alt="CheckLogo">
+        <h2>¡Usuario eliminado!</h2>
+   </div>
+
+   `;
+    
+   cargarUsuarios(usuarios);
+
+}
+
+function editarUsuario(idUsuario){
+
+    let rangoNuevo = document.querySelector("#cbRangos").value;
+
+    usuarios.forEach((usuario)=>{
+        if(usuario.id==idUsuario){
+            usuario.rango = rangoNuevo;
+        }
+    })
+
+    cargarUsuarios(usuarios);
+    
+}
+
+
+
+function administrarProductos(){
+
     productos = leerProductos();
-    console.log(productos);
+    let main = document.querySelector("main");
+    main.innerHTML = `
+    <div id="contenedorBotonesAdmin">
+   
+    <button id="botonAgregarProducto" data-bs-toggle="modal" data-bs-target="#modalEditarProducto" onclick="mostrarModalAgregar()" class="botones">Agregar Producto</button>
+    <button class="botones" onclick="mostrarMenu()">Volver</button>
+    
+    </div>
+    <section id="principalAdminPage" class="productosAdminPage">
+            <h1>Pagina de Administrador</h1>
+            
+    </section>  
+
+    <div class="modal fade" id="modalEditarProducto" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1  id="tituloModal" class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modalBodyEditarProductos">
+
+            </div>
+            <div class="modal-footer" id="modalFooterEditarProductos">
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    `; 
+    let productosAdminPage = document.querySelector("#principalAdminPage");
     productos.forEach((producto) => {
 
         productosAdminPage.innerHTML += `
@@ -68,7 +313,10 @@ window.onload = () => {
             `;
     }
     );
+
+
 }
+
 
 
 function eliminarProducto(idProducto) {
@@ -208,20 +456,7 @@ function editarProducto(idProducto) {
     let imagen = document.querySelector("#linkImagen").value;
     let categoria = document.querySelector("#categoriaProducto").value;
     let descripcion = document.querySelector("#descripcionProducto").value;
-    
-    console.log(nombreProducto);
 
-    console.log(precioProducto);
-
-    console.log(cbDestacado);
-
-    console.log(cbNuevo);
-
-    console.log(imagen);
-
-    console.log(categoria);
-
-    console.log(descripcion);
 
 
     productos.forEach((producto)=>{
